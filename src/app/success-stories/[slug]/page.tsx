@@ -118,7 +118,7 @@ export default function SuccessStoryPage({ params }: SuccessStoryPageProps) {
                       <div key={index}>
                         <p className="text-sm text-gray-600 dark:text-gray-400">{item.title}</p>
                         <p className="text-2xl font-bold text-primary">{item.value}</p>
-                        {index < story.impact?.length - 1 && <Separator className="mt-2" />}
+                        {index < story.impact!.length - 1 && <Separator className="mt-2" />}
                       </div>
                     ))}
                   </div>
