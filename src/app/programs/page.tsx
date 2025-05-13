@@ -1,12 +1,21 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { BookOpen, Heart, Lightbulb, Globe, Users } from "lucide-react"
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useTheme } from "next-themes";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { BookOpen, Heart, Lightbulb, Globe, Users } from "lucide-react";
 
 export default function ProgramsPage() {
+  const { theme } = useTheme();
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div
+      className={`min-h-screen ${
+        theme === "dark" ? "bg-gray-900" : "bg-white"
+      }`}
+    >
       {/* Hero Section */}
       <section className="relative h-[40vh] flex items-center">
         <div className="absolute inset-0 z-0">
@@ -20,22 +29,33 @@ export default function ProgramsPage() {
         </div>
         <div className="container mx-auto px-4 z-10 text-white">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Our Programs</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              Our Programs
+            </h1>
             <p className="text-xl">
-              Discover how we're creating sustainable impact across Nepal through our diverse programs.
+              Discover how we&apos;re creating sustainable impact across Nepal
+              through our diverse programs.
             </p>
           </div>
         </div>
       </section>
 
       {/* Programs Overview */}
-      <section className="py-16">
+      <section
+        className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">What We Do</h2>
+            <h2
+              className={`text-3xl font-bold mb-4 ${
+                theme === "dark" ? "text-white" : "text-gray-900"
+              }`}
+            >
+              What We Do
+            </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Our programs focus on creating sustainable solutions to the most pressing challenges faced by communities
-              across Nepal.
+              Our programs focus on creating sustainable solutions to the most
+              pressing challenges faced by communities across Nepal.
             </p>
           </div>
 
@@ -55,7 +75,8 @@ export default function ProgramsPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Education</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Providing quality education and learning opportunities for children and adults.
+                  Providing quality education and learning opportunities for
+                  children and adults.
                 </p>
                 <Button asChild variant="outline" className="w-full">
                   <Link href="/programs/education">Learn More</Link>
@@ -78,7 +99,8 @@ export default function ProgramsPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Healthcare</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Improving access to healthcare services and promoting health awareness.
+                  Improving access to healthcare services and promoting health
+                  awareness.
                 </p>
                 <Button asChild variant="outline" className="w-full">
                   <Link href="/programs/healthcare">Learn More</Link>
@@ -101,7 +123,8 @@ export default function ProgramsPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Livelihood</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Creating sustainable livelihood opportunities and economic empowerment.
+                  Creating sustainable livelihood opportunities and economic
+                  empowerment.
                 </p>
                 <Button asChild variant="outline" className="w-full">
                   <Link href="/programs/livelihood">Learn More</Link>
@@ -124,7 +147,8 @@ export default function ProgramsPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Disaster Relief</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Providing immediate relief and long-term recovery support during disasters.
+                  Providing immediate relief and long-term recovery support
+                  during disasters.
                 </p>
                 <Button asChild variant="outline" className="w-full">
                   <Link href="/programs/disaster-relief">Learn More</Link>
@@ -136,7 +160,9 @@ export default function ProgramsPage() {
       </section>
 
       {/* Featured Program */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+      <section
+        className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}
+      >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 md:h-96">
@@ -151,15 +177,26 @@ export default function ProgramsPage() {
               <div className="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full mb-4">
                 Featured Program
               </div>
-              <h2 className="text-3xl font-bold mb-4">Women Empowerment</h2>
+              <h2
+                className={`text-3xl font-bold mb-4 ${
+                  theme === "dark" ? "text-white" : "text-gray-900"
+                }`}
+              >
+                Women Empowerment
+              </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                Our Women Empowerment program focuses on providing skills training, financial literacy, and
-                entrepreneurship opportunities to women in rural communities.
+                Our Women Empowerment program focuses on providing skills
+                training, financial literacy, and entrepreneurship opportunities
+                to women in rural communities.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <div className="bg-green-100 dark:bg-green-900 p-1 rounded-full mr-3 mt-1">
-                    <svg className="h-3 w-3 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      className="h-3 w-3 text-green-600 dark:text-green-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path
                         fillRule="evenodd"
                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -171,7 +208,11 @@ export default function ProgramsPage() {
                 </li>
                 <li className="flex items-start">
                   <div className="bg-green-100 dark:bg-green-900 p-1 rounded-full mr-3 mt-1">
-                    <svg className="h-3 w-3 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      className="h-3 w-3 text-green-600 dark:text-green-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path
                         fillRule="evenodd"
                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -183,7 +224,11 @@ export default function ProgramsPage() {
                 </li>
                 <li className="flex items-start">
                   <div className="bg-green-100 dark:bg-green-900 p-1 rounded-full mr-3 mt-1">
-                    <svg className="h-3 w-3 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      className="h-3 w-3 text-green-600 dark:text-green-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path
                         fillRule="evenodd"
                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -195,7 +240,9 @@ export default function ProgramsPage() {
                 </li>
               </ul>
               <Button asChild>
-                <Link href="/programs/women-empowerment">Learn More About This Program</Link>
+                <Link href="/programs/women-empowerment">
+                  Learn More About This Program
+                </Link>
               </Button>
             </div>
           </div>
@@ -203,12 +250,21 @@ export default function ProgramsPage() {
       </section>
 
       {/* Program Details */}
-      <section className="py-16">
+      <section
+        className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Approach</h2>
+            <h2
+              className={`text-3xl font-bold mb-4 ${
+                theme === "dark" ? "text-white" : "text-gray-900"
+              }`}
+            >
+              Our Approach
+            </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              We believe in creating sustainable impact through community-led initiatives and partnerships.
+              We believe in creating sustainable impact through community-led
+              initiatives and partnerships.
             </p>
           </div>
 
@@ -220,8 +276,8 @@ export default function ProgramsPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Community-Led</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  We work directly with communities to understand their needs and involve them in program design and
-                  implementation.
+                  We work directly with communities to understand their needs
+                  and involve them in program design and implementation.
                 </p>
               </CardContent>
             </Card>
@@ -229,7 +285,12 @@ export default function ProgramsPage() {
             <Card className="border-none shadow-lg">
               <CardContent className="p-6">
                 <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
-                  <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg
+                    className="h-6 w-6 text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -240,8 +301,8 @@ export default function ProgramsPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Sustainable</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Our programs are designed to create lasting change by building local capacity and fostering
-                  self-reliance.
+                  Our programs are designed to create lasting change by building
+                  local capacity and fostering self-reliance.
                 </p>
               </CardContent>
             </Card>
@@ -249,7 +310,12 @@ export default function ProgramsPage() {
             <Card className="border-none shadow-lg">
               <CardContent className="p-6">
                 <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
-                  <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg
+                    className="h-6 w-6 text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -260,8 +326,8 @@ export default function ProgramsPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Collaborative</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  We partner with local organizations, government agencies, and international NGOs to maximize our
-                  impact.
+                  We partner with local organizations, government agencies, and
+                  international NGOs to maximize our impact.
                 </p>
               </CardContent>
             </Card>
@@ -270,10 +336,18 @@ export default function ProgramsPage() {
       </section>
 
       {/* Impact Stories */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+      <section
+        className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Impact Stories</h2>
+            <h2
+              className={`text-3xl font-bold mb-4 ${
+                theme === "dark" ? "text-white" : "text-gray-900"
+              }`}
+            >
+              Impact Stories
+            </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               Real stories of change from the communities we work with.
             </p>
@@ -282,13 +356,19 @@ export default function ProgramsPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="overflow-hidden">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=400&width=600" alt="Sunita's Story" fill className="object-cover" />
+                <Image
+                  src="/placeholder.svg?height=400&width=600"
+                  alt="Sunita's Story"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2">Sunita&apos;s Story</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  &quot;The vocational training program gave me the skills to start my own tailoring business. Now I can
-                  support my family and send my children to school.&quot;
+                  &quot;The vocational training program gave me the skills to
+                  start my own tailoring business. Now I can support my family
+                  and send my children to school.&quot;
                 </p>
                 <Button asChild variant="link" className="p-0">
                   <Link href="/success-stories/sunita">Read Full Story</Link>
@@ -298,32 +378,50 @@ export default function ProgramsPage() {
 
             <Card className="overflow-hidden">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=400&width=600" alt="Gorkha School" fill className="object-cover" />
+                <Image
+                  src="/placeholder.svg?height=400&width=600"
+                  alt="Gorkha School"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2">Rebuilding Gorkha School</h3>
+                <h3 className="text-xl font-bold mb-2">
+                  Rebuilding Gorkha School
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  &quot;After the earthquake, our school was completely destroyed. Yakumaya helped us rebuild a safer, better
-                  school for our children.&quot;
+                  &quot;After the earthquake, our school was completely
+                  destroyed. Yakumaya helped us rebuild a safer, better school
+                  for our children.&quot;
                 </p>
                 <Button asChild variant="link" className="p-0">
-                  <Link href="/success-stories/gorkha-school">Read Full Story</Link>
+                  <Link href="/success-stories/gorkha-school">
+                    Read Full Story
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
 
             <Card className="overflow-hidden">
               <div className="relative h-48">
-                <Image src="/placeholder.svg?height=400&width=600" alt="Health Camp" fill className="object-cover" />
+                <Image
+                  src="/placeholder.svg?height=400&width=600"
+                  alt="Health Camp"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2">Dolakha Health Camp</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  &quot;The health camp provided medical care to over 500 people in our remote village who otherwise wouldn&apos;t
-                  have access to healthcare.&quot;
+                  &quot;The health camp provided medical care to over 500 people
+                  in our remote village who otherwise wouldn&apos;t have access
+                  to healthcare.&quot;
                 </p>
                 <Button asChild variant="link" className="p-0">
-                  <Link href="/success-stories/dolakha-health-camp">Read Full Story</Link>
+                  <Link href="/success-stories/dolakha-health-camp">
+                    Read Full Story
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -342,18 +440,23 @@ export default function ProgramsPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Support Our Programs</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Your contribution can help us expand our programs and reach more communities in need.
+            Your contribution can help us expand our programs and reach more
+            communities in need.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
               <Link href="/donate">Donate Now</Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/20">
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-white border-white hover:bg-white/20"
+            >
               Become a Partner
             </Button>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }

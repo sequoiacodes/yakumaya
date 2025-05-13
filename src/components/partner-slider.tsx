@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import Image from "next/image"
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const partners = [
   { id: 1, name: "Partner 1", logo: "/placeholder-logo.svg" },
@@ -12,26 +13,40 @@ const partners = [
   { id: 6, name: "Partner 6", logo: "/placeholder-logo.svg" },
   { id: 7, name: "Partner 7", logo: "/placeholder-logo.svg" },
   { id: 8, name: "Partner 8", logo: "/placeholder-logo.svg" },
-]
+];
 
 export default function PartnerSlider() {
-  const [position, setPosition] = useState(0)
+  const { theme } = useTheme();
+  const [position, setPosition] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPosition((prev) => (prev + 1) % (partners.length * 2))
-    }, 3000)
+      setPosition((prev) => (prev + 1) % (partners.length * 2));
+    }, 3000);
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <section className="py-16">
+    <section
+      className={`py-16 ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Partners</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            We collaborate with organizations that share our vision for a better Nepal.
+          <h2
+            className={`text-3xl font-bold mb-4 ${
+              theme === "dark" ? "text-white" : "text-gray-900"
+            }`}
+          >
+            Our Partners
+          </h2>
+          <p
+            className={`text-lg max-w-3xl mx-auto ${
+              theme === "dark" ? "text-gray-400" : "text-gray-600"
+            }`}
+          >
+            We collaborate with organizations that share our vision for a better
+            Nepal.
           </p>
         </div>
 
@@ -44,8 +59,15 @@ export default function PartnerSlider() {
             }}
           >
             {[...partners, ...partners].map((partner, index) => (
-              <div key={`${partner.id}-${index}`} className="flex-shrink-0 w-1/4 md:w-1/6 lg:w-1/8 px-4">
-                <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm flex items-center justify-center h-24">
+              <div
+                key={`${partner.id}-${index}`}
+                className="flex-shrink-0 w-1/4 md:w-1/6 lg:w-1/8 px-4"
+              >
+                <div
+                  className={`p-4 rounded-lg shadow-sm flex items-center justify-center h-24 ${
+                    theme === "dark" ? "bg-gray-800" : "bg-white"
+                  }`}
+                >
                   <Image
                     src={partner.logo || "/placeholder.svg"}
                     alt={partner.name}
@@ -60,5 +82,5 @@ export default function PartnerSlider() {
         </div>
       </div>
     </section>
-  )
+  );
 }

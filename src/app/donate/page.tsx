@@ -1,5 +1,6 @@
 "use client"
 
+import { useTheme } from "next-themes"
 import type React from "react"
 
 import { useState } from "react"
@@ -17,6 +18,7 @@ import { Progress } from "@/components/ui/progress"
 import { Heart, CreditCard, DollarSign, Calendar, CheckCircle2 } from "lucide-react"
 
 export default function DonatePage() {
+  const { theme } = useTheme()
   const [donationAmount, setDonationAmount] = useState<string>("50")
   const [customAmount, setCustomAmount] = useState<string>("")
   const [isRecurring, setIsRecurring] = useState<boolean>(false)
@@ -53,22 +55,24 @@ export default function DonatePage() {
   const finalAmount = donationAmount === "custom" ? customAmount : donationAmount
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className={`flex flex-col min-h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
       {/* Hero Section */}
-      <section className="relative h-[40vh] flex items-center">
+      <section className={`relative h-[40vh] flex items-center ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-50'}`}>
         <div className="absolute inset-0 z-0">
           <Image
             src="/placeholder.svg?height=600&width=1920"
             alt="Donate Hero"
             fill
-            className="object-cover brightness-50"
+            className={`object-cover brightness-50 ${theme === 'dark' ? 'opacity-80' : 'opacity-100'}`}
             priority
           />
         </div>
-        <div className="container mx-auto px-4 z-10 text-white">
+        <div className="container mx-auto px-4 z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Make a Donation</h1>
-            <p className="text-xl">
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-white'}`}>
+              Make a Donation
+            </h1>
+            <p className={`text-xl ${theme === 'dark' ? 'text-gray-100' : 'text-gray-100'}`}>
               Your support helps us continue our work and create lasting impact in communities across Nepal.
             </p>
           </div>
@@ -76,12 +80,14 @@ export default function DonatePage() {
       </section>
 
       {/* Donation Form Section */}
-      <section className="py-16">
+      <section className={`py-16 ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Your Donation Makes a Difference</h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+              <h2 className={`text-3xl font-bold mb-6 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                Your Donation Makes a Difference
+              </h2>
+              <p className={`text-lg mb-6 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
                 Every contribution, no matter the size, helps us implement programs and reach more communities in need.
                 Your generosity directly supports our work in education, healthcare, livelihood, and disaster relief.
               </p>
@@ -176,8 +182,10 @@ export default function DonatePage() {
                 </div>
               </div>
 
-              <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-                <h3 className="text-xl font-bold mb-4">Other Ways to Donate</h3>
+              <div className={`bg-gray-50 p-6 rounded-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-50'}`}>
+                <h3 className={`text-xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                  Other Ways to Donate
+                </h3>
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-bold">Bank Transfer</h4>
@@ -210,10 +218,10 @@ export default function DonatePage() {
             </div>
 
             <div>
-              <Card className="border-none shadow-lg">
+              <Card className={`border-none shadow-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
                 <CardContent className="p-6">
                   {isSuccess ? (
-                    <div className="text-center py-8">
+                    <div className={`text-center py-8 ${theme === 'dark' ? 'text-gray-100' : 'text-gray-900'}`}>
                       <div className="flex justify-center mb-4">
                         <CheckCircle2 className="h-16 w-16 text-green-500" />
                       </div>
@@ -433,7 +441,7 @@ export default function DonatePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+      <section className={`py-16 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-50'}`}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Why People Donate</h2>
@@ -488,7 +496,7 @@ export default function DonatePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16">
+      <section className={`py-16 ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
@@ -496,7 +504,7 @@ export default function DonatePage() {
               Find answers to common questions about donating to our organization.
             </p>
           </div>
-
+          </div>
           <div className="max-w-3xl mx-auto space-y-6">
             <Card>
               <CardContent className="p-6">
@@ -539,11 +547,12 @@ export default function DonatePage() {
               </CardContent>
             </Card>
           </div>
-        </div>
+
+       
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-primary text-white">
+      <section className={`py-16 ${theme === 'dark' ? 'bg-primary-dark' : 'bg-primary'} text-white`}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Other Ways to Support Our Work</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
