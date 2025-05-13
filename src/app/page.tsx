@@ -232,15 +232,15 @@ export default function Home() {
               <div className="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full mb-4">
                 Featured Project
               </div>
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-3xl text-primary font-bold mb-4">
                 School Rebuilding Initiative
               </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+              <p className= {`text-lg mb-6 ${theme === "dark" ? "text-white" : "text-gray-950"}`}>
                 After the devastating earthquake in Nepal, we&apos;ve been
                 working to rebuild schools in remote areas, ensuring children
                 have safe spaces to learn and grow.
               </p>
-              <ul className="space-y-2 mb-6">
+              <ul className={`space-y-2 mb-6 ${theme === "dark" ? "text-white" : "text-gray-950"}`}>
                 <li className="flex items-start">
                   <div className="bg-green-100 dark:bg-green-900 p-1 rounded-full mr-3 mt-1">
                     <svg

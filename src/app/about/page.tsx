@@ -128,8 +128,18 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
                   <Target className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-                <p className="text-gray-700 dark:text-gray-300">
+                <h3
+                  className={`text-2xl font-bold mb-4 ${
+                    theme === "dark" ? "text-gray-100" : "text-gray-900"
+                  }`}
+                >
+                  Our Mission
+                </h3>
+                <p
+                  className={`${
+                    theme === "dark" ? "text-gray-300" : "text-gray-700"
+                  }`}
+                >
                   To empower communities through sustainable development
                   initiatives, focusing on education, healthcare, livelihood,
                   and disaster relief, creating lasting positive change across
@@ -147,8 +157,18 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
                   <Lightbulb className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-                <p className="text-gray-700 dark:text-gray-300">
+                <h3
+                  className={`text-2xl font-bold mb-4 ${
+                    theme === "dark" ? "text-gray-100" : "text-gray-900"
+                  }`}
+                >
+                  Our Vision
+                </h3>
+                <p
+                  className={`${
+                    theme === "dark" ? "text-gray-300" : "text-gray-700"
+                  }`}
+                >
                   A Nepal where all communities have equal access to
                   opportunities, resources, and services, enabling them to lead
                   dignified, healthy, and prosperous lives.
@@ -158,7 +178,11 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-12">
-            <h3 className="text-2xl font-bold mb-6 text-center">
+            <h3
+              className={`text-2xl font-bold mb-6 text-center ${
+                theme === "dark" ? "text-gray-100" : "text-gray-900"
+              }`}
+            >
               Our Core Values
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -166,8 +190,18 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 rounded-full w-fit mx-auto mb-4">
                   <Heart className="h-6 w-6 text-primary" />
                 </div>
-                <h4 className="font-bold mb-2">Compassion</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <h4
+                  className={`font-bold mb-2 ${
+                    theme === "dark" ? "text-gray-100" : "text-gray-900"
+                  }`}
+                >
+                  Compassion
+                </h4>
+                <p
+                  className={`text-sm ${
+                    theme === "dark" ? "text-gray-400" : "text-gray-600"
+                  }`}
+                >
                   We approach our work with empathy and understanding.
                 </p>
               </div>
@@ -283,15 +317,29 @@ export default function AboutPage() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <h2
+              className={`text-3xl font-bold mb-4 ${
+                theme === "dark" ? "text-gray-100" : "text-gray-900"
+              }`}
+            >
+              Our Impact
+            </h2>
+            <p
+              className={`text-lg max-w-3xl mx-auto ${
+                theme === "dark" ? "text-gray-400" : "text-gray-600"
+              }`}
+            >
               Over the years, We&apos;ve made significant strides in improving
               lives across Nepal.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-none shadow-lg">
+            <Card
+              className={`border-none shadow-lg ${
+                theme === "dark" ? "bg-gray-700" : "bg-white"
+              }`}
+            >
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <div className="bg-primary/10 p-3 rounded-full">
@@ -299,8 +347,18 @@ export default function AboutPage() {
                   </div>
                   <span className="text-4xl font-bold text-primary">50+</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Schools Supported</h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <h3
+                  className={`text-xl font-bold mb-2 ${
+                    theme === "dark" ? "text-gray-100" : "text-gray-900"
+                  }`}
+                >
+                  Schools Supported
+                </h3>
+                <p
+                  className={`${
+                    theme === "dark" ? "text-gray-400" : "text-gray-600"
+                  }`}
+                >
                   We&apos;ve rebuilt and supported over 50 schools, providing
                   quality education to thousands of children.
                 </p>
@@ -375,7 +433,9 @@ export default function AboutPage() {
             {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
               <div
                 key={item}
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm flex items-center justify-center h-32"
+                className={`p-6 rounded-lg shadow-sm flex items-center justify-center h-32 ${
+                  theme === "dark" ? "bg-gray-800" : "bg-white"
+                }`}
               >
                 <Image
                   src="/placeholder-logo.svg"
