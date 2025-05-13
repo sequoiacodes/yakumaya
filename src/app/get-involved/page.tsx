@@ -355,7 +355,7 @@ export default function GetInvolvedPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">NGO Partnerships</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Collaborate with us to implement joint programs, share resources, and leverage each other's strengths
+                  Collaborate with us to implement joint programs, share resources, and leverage each other&apos;s strengths
                   for greater impact.
                 </p>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400 mb-4">
@@ -449,7 +449,7 @@ export default function GetInvolvedPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Legacy Giving</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Include Akumaya Foundation in your will or estate planning to create lasting impact.
+                  Include Yakumaya Foundation in your will or estate planning to create lasting impact.
                 </p>
               </CardContent>
             </Card>

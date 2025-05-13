@@ -11,13 +11,13 @@ export default function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <Image
                 src="/placeholder.svg?height=40&width=40"
-                alt="Akumaya Logo"
+                alt="Yakumaya Logo"
                 width={40}
                 height={40}
                 className="rounded-full bg-white"
               />
               <div>
-                <h2 className="text-lg font-bold">Akumaya</h2>
+                <h2 className="text-lg font-bold">Yakumaya</h2>
                 <p className="text-xs text-gray-400">Helping Hands Foundation Nepal</p>
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-gray-400" />
-                <span className="text-gray-400">info@akumaya.org.np</span>
+                <span className="text-gray-400">info@Yakumaya.org.np</span>
               </li>
             </ul>
           </div>
@@ -133,7 +133,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Akumaya Helping Hands Foundation Nepal. All rights reserved.
+              &copy; {new Date().getFullYear()} Yakumaya Helping Hands Foundation Nepal. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0">
               <ul className="flex space-x-6 text-sm text-gray-400">

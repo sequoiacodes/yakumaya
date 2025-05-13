@@ -78,9 +78,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      info@akumaya.org.np
+                      info@yakumaya.org.np
                       <br />
-                      support@akumaya.org.np
+                      support@yakumaya.org.np
                     </p>
                   </div>
                 </div>

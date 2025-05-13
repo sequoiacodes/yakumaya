@@ -182,7 +182,7 @@ export default function DonatePage() {
                   <div>
                     <h4 className="font-bold">Bank Transfer</h4>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Account Name: Akumaya Helping Hands Foundation
+                      Account Name: Yakumaya Helping Hands Foundation
                       <br />
                       Bank: Nepal Bank Ltd.
                       <br />
@@ -194,7 +194,7 @@ export default function DonatePage() {
                   <div>
                     <h4 className="font-bold">By Check</h4>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Please make checks payable to &quot;Akumaya Helping Hands Foundation&quot; and mail to:
+                      Please make checks payable to &quot;Yakumaya Helping Hands Foundation&quot; and mail to:
                       <br />
                       P.O. Box 1234, Kathmandu, Nepal
                     </p>
@@ -202,7 +202,7 @@ export default function DonatePage() {
                   <div>
                     <h4 className="font-bold">For Large Donations</h4>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Please contact us directly at donations@akumaya.org.np or call +977 1 XXXXXXX
+                      Please contact us directly at donations@yakumaya.org.np or call +977 1 XXXXXXX
                     </p>
                   </div>
                 </div>
@@ -448,14 +448,14 @@ export default function DonatePage() {
                 name: "Sarah Johnson",
                 role: "Monthly Donor since 2020",
                 quote:
-                  "I've seen firsthand the impact that Akumaya Foundation has in rural communities. Their transparency and dedication to sustainable development is why I continue to support them.",
+                  "I've seen firsthand the impact that Yakumaya Foundation has in rural communities. Their transparency and dedication to sustainable development is why I continue to support them.",
                 image: "/placeholder.svg?height=100&width=100",
               },
               {
                 name: "David Chen",
                 role: "Corporate Partner",
                 quote:
-                  "Our company chose to partner with Akumaya because of their proven track record and community-centered approach. The results we've seen from our contributions have been remarkable.",
+                  "Our company chose to partner with Yakumaya because of their proven track record and community-centered approach. The results we've seen from our contributions have been remarkable.",
                 image: "/placeholder.svg?height=100&width=100",
               },
               {
@@ -502,7 +502,7 @@ export default function DonatePage() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2">Is my donation tax-deductible?</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Yes, Akumaya Helping Hands Foundation Nepal is a registered non-profit organization, and all donations
+                  Yes, Yakumaya Helping Hands Foundation Nepal is a registered non-profit organization, and all donations
                   are tax-deductible to the extent allowed by law. We provide tax receipts for all donations.
                 </p>
               </CardContent>
@@ -534,7 +534,7 @@ export default function DonatePage() {
                 <h3 className="text-xl font-bold mb-2">How do I cancel or modify my recurring donation?</h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   You can cancel or modify your recurring donation at any time by contacting our donor support team at
-                  donations@akumaya.org.np or by calling +977 1 XXXXXXX.
+                  donations@Yakumaya.org.np or by calling +977 1 XXXXXXX.
                 </p>
               </CardContent>
             </Card>

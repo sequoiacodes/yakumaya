@@ -63,12 +63,12 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/placeholder.svg?height=40&width=40"
+            <Image style={{ animationDuration: "20000ms", animationDirection: "reverse" }}
+              src="/logoYa.png?height=60&width=60"
               alt="Akumaya Logo"
-              width={40}
-              height={40}
-              className="rounded-full"
+              width={80}
+              height={80}
+              className="rounded-full animate-spin " 
             />
             <div className="hidden md:block">
               <h1 className="text-lg font-bold text-primary">Yakumaya</h1>

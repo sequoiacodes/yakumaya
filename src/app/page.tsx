@@ -28,7 +28,7 @@ export default function Home() {
               Empowering Communities, Transforming Lives
             </h1>
             <p className="text-xl mb-8">
-              Akumaya Helping Hands Foundation Nepal is dedicated to sustainable development and improving lives across
+              Yakumaya Helping Hands Foundation Nepal is dedicated to sustainable development and improving lives across
               Nepal.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -50,7 +50,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                Akumaya Helping Hands Foundation Nepal is committed to empowering communities through sustainable
+                Yakumaya Helping Hands Foundation Nepal is committed to empowering communities through sustainable
                 development initiatives, focusing on education, healthcare, livelihood, and disaster relief.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">

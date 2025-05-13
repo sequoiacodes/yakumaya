@@ -285,10 +285,10 @@ export default function ProgramsPage() {
                 <Image src="/placeholder.svg?height=400&width=600" alt="Sunita's Story" fill className="object-cover" />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2">Sunita's Story</h3>
+                <h3 className="text-xl font-bold mb-2">Sunita&apos;s Story</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  "The vocational training program gave me the skills to start my own tailoring business. Now I can
-                  support my family and send my children to school."
+                  &quot;The vocational training program gave me the skills to start my own tailoring business. Now I can
+                  support my family and send my children to school.&quot;
                 </p>
                 <Button asChild variant="link" className="p-0">
                   <Link href="/success-stories/sunita">Read Full Story</Link>
@@ -303,8 +303,8 @@ export default function ProgramsPage() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2">Rebuilding Gorkha School</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  "After the earthquake, our school was completely destroyed. Akumaya helped us rebuild a safer, better
-                  school for our children."
+                  &quot;After the earthquake, our school was completely destroyed. Yakumaya helped us rebuild a safer, better
+                  school for our children.&quot;
                 </p>
                 <Button asChild variant="link" className="p-0">
                   <Link href="/success-stories/gorkha-school">Read Full Story</Link>
@@ -319,8 +319,8 @@ export default function ProgramsPage() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2">Dolakha Health Camp</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  "The health camp provided medical care to over 500 people in our remote village who otherwise wouldn't
-                  have access to healthcare."
+                  &quot;The health camp provided medical care to over 500 people in our remote village who otherwise wouldn&apos;t
+                  have access to healthcare.&quot;
                 </p>
                 <Button asChild variant="link" className="p-0">
                   <Link href="/success-stories/dolakha-health-camp">Read Full Story</Link>

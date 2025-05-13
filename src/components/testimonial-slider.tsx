@@ -9,7 +9,7 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "The support from Akumaya Foundation has transformed our school. The new classrooms and learning materials have created a better environment for our students.",
+      "The support from Yakumaya Foundation has transformed our school. The new classrooms and learning materials have created a better environment for our students.",
     name: "Ramesh Sharma",
     title: "School Principal, Sindhupalchok",
     image: "/placeholder.svg?height=100&width=100",
@@ -25,7 +25,7 @@ const testimonials = [
   {
     id: 3,
     quote:
-      "After the earthquake, Akumaya was one of the first organizations to reach our village with relief supplies. Their continued support has helped us rebuild our lives.",
+      "After the earthquake, Yakumaya was one of the first organizations to reach our village with relief supplies. Their continued support has helped us rebuild our lives.",
     name: "Bir Bahadur Gurung",
     title: "Community Leader, Gorkha",
     image: "/placeholder.svg?height=100&width=100",

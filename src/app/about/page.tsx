@@ -33,7 +33,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                Akumaya Helping Hands Foundation Nepal was established in 2010 with a vision to create sustainable
+                Yakumaya Helping Hands Foundation Nepal was established in 2010 with a vision to create sustainable
                 development and improve the quality of life for communities across Nepal.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
