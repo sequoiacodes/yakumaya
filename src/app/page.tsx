@@ -15,7 +15,7 @@ export default function Home() {
       <section className="relative h-[80vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/LP1.png?height=1080&width=1920"
             alt="Hero Image"
             fill
             className="object-cover brightness-50"
@@ -28,7 +28,7 @@ export default function Home() {
               Empowering Communities, Transforming Lives
             </h1>
             <p className="text-xl mb-8">
-              Akumaya Helping Hands Foundation Nepal is dedicated to sustainable development and improving lives across
+              Yakumaya Helping Hands Foundation Nepal is dedicated to sustainable development and improving lives across
               Nepal.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
             <div className="relative h-80 md:h-96">
               <Image
-                src="/placeholder.svg?height=600&width=800"
+                src="/LP2.png?height=600&width=800"
                 alt="Our Mission"
                 fill
                 className="object-cover rounded-lg"
