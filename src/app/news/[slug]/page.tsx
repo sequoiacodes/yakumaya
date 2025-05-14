@@ -1,34 +1,22 @@
 import { newsArticles } from "@/data/news-data";
 import { notFound } from "next/navigation";
 import NewsDetailClient from "./news-detail-client";
-import type { Metadata } from "next";
 
-// Generate metadata for SEO
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const article = newsArticles.find((article) => article.slug === params.slug);
-  
-  if (!article) {
-    return {
-      title: 'Article Not Found',
-      description: 'The requested article could not be found.'
-    };
+// Import NewsArticle type from news-data
+import { NewsArticle } from "@/data/news-data";
+
+interface NewsDetailPageProps {
+  params: {
+    slug: string;
   }
-  
-  return {
-    title: article.title,
-    description: article.excerpt,
-    openGraph: {
-      title: article.title,
-      description: article.excerpt,
-      images: [{ url: article.imageUrl }]
-    }
-  };
 }
 
-// Use the simplified function signature
-export default function NewsDetailPage({ params }: { params: { slug: string } }) {
+export default async function NewsDetailPage(props: NewsDetailPageProps) {
+  // Access slug from props.params
+  const { slug } = props.params;
+  
   // Find the article
-  const article = newsArticles.find((article) => article.slug === params.slug);
+    const article: NewsArticle = newsArticles.find((article) => article.slug === slug)!;
   
   // If article not found, show 404
   if (!article) {
@@ -36,7 +24,7 @@ export default function NewsDetailPage({ params }: { params: { slug: string } })
   }
 
   // Get related articles
-  const relatedArticles = newsArticles
+  const relatedArticles: NewsArticle[] = newsArticles
     .filter(
       (a) =>
         a.id !== article.id &&
