@@ -8,15 +8,13 @@ import { Calendar, User, Tag, ArrowLeft } from "lucide-react";
 import { newsArticles } from "@/data/news-data";
 import { notFound } from "next/navigation";
 
-// Update the props interface
-type Props = {
+interface PageProps {
   params: {
     slug: string;
   };
-  searchParams: Record<string, string | string[] | undefined>;
-};
+}
 
-export default function NewsDetailPage({ params }: Props) {
+export default function NewsDetailPage({ params }: PageProps) {
   const { theme } = useTheme();
   const article = newsArticles.find((article) => article.slug === params.slug);
 
