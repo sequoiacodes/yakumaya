@@ -12,9 +12,10 @@ interface PageProps {
   params: {
     slug: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default function NewsDetailPage({ params }: PageProps) {
+export default function NewsDetailPage({ params, searchParams }: PageProps) {
   const { theme } = useTheme();
   const article = newsArticles.find((article) => article.slug === params.slug);
 
