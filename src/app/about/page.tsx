@@ -261,14 +261,14 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                name: "Rajesh Sharma",
+                name: "Rajesh Sharma For Now",
                 title: "Executive Director",
-                image: "/slider2.png?height=300&width=300",
+                image: "/ceo.png?height=300&width=300",
               },
               {
-                name: "Sunita Gurung",
-                title: "Program Director",
-                image: "/profile1.png?height=300&width=300",
+                name: "Sunita Gurung For now",
+                title: "Chairman",
+                image: "/chairman.png?height=300&width=300",
               },
               {
                 name: "Binod Thapa",
@@ -292,7 +292,7 @@ export default function AboutPage() {
                     src={member.image || "/placeholder.svg"}
                     alt={member.name}
                     fill
-                    className="object-cover"
+                    className="object-contain "
                   />
                 </div>
                 <h3 className="text-xl font-bold">{member.name}</h3>

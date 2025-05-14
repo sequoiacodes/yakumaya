@@ -75,8 +75,8 @@ export default function Home() {
         className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}
       >
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-12 items-center">
-            <div className="md:col-span-2">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="">
               <h2
                 className={`text-3xl font-bold mb-6 ${
                   theme === "dark" ? "text-white" : "text-gray-900"
@@ -110,7 +110,8 @@ export default function Home() {
                 Learn more about us <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
-            <div className="relative w-60 h-80 bg-transparent ">
+            <div className="flex justify-center items-center flex-wrap  md:gap-8">
+            <div className="relative w-50 h-70 bg-transparent ">
               <Image
                 src="/ceo.png?height=500&width=400"
                 alt="Our Mission"
@@ -118,6 +119,19 @@ export default function Home() {
                 height={500}
                 className="object-cover rounded-2xl bg-contain shadow-lg shadow-gray-950"
               />
+              <p className="text-center text-gray-500 pt-2">Executive Director</p>
+            </div>
+            <div className="relative w-55 h-80 bg-transparent ">
+              <Image
+                src="/chairman.png?height=500&width=400"
+                alt="Our Mission"
+                width={400}
+                height={500}
+                className="object-cover rounded-2xl bg-contain shadow-lg shadow-gray-950"
+              />
+              <p className="text-center text-gray-500 pt-2">Chairman</p>
+            </div>
+
             </div>
           </div>
         </div>
