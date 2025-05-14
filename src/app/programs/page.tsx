@@ -20,7 +20,7 @@ export default function ProgramsPage() {
       <section className="relative h-[40vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=600&width=1920"
+            src="/helpfood.jpg?height=600&width=1920"
             alt="Programs Hero"
             fill
             className="object-cover brightness-50"
@@ -53,7 +53,7 @@ export default function ProgramsPage() {
             >
               What We Do
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-500 max-w-3xl mx-auto">
               Our programs focus on creating sustainable solutions to the most
               pressing challenges faced by communities across Nepal.
             </p>
@@ -63,7 +63,7 @@ export default function ProgramsPage() {
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/student.jpg?height=400&width=600"
                   alt="Education"
                   fill
                   className="object-cover rounded-t-lg"
@@ -74,7 +74,7 @@ export default function ProgramsPage() {
                   <BookOpen className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Education</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-gray-500 mb-4">
                   Providing quality education and learning opportunities for
                   children and adults.
                 </p>
@@ -87,7 +87,7 @@ export default function ProgramsPage() {
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/camp.png?height=400&width=600"
                   alt="Healthcare"
                   fill
                   className="object-cover rounded-t-lg"
@@ -98,7 +98,7 @@ export default function ProgramsPage() {
                   <Heart className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Healthcare</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-gray-500 mb-4">
                   Improving access to healthcare services and promoting health
                   awareness.
                 </p>
@@ -111,7 +111,7 @@ export default function ProgramsPage() {
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/children.jpg?height=400&width=600"
                   alt="Livelihood"
                   fill
                   className="object-cover rounded-t-lg"
@@ -122,7 +122,7 @@ export default function ProgramsPage() {
                   <Lightbulb className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Livelihood</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-gray-500 mb-4">
                   Creating sustainable livelihood opportunities and economic
                   empowerment.
                 </p>
@@ -135,7 +135,7 @@ export default function ProgramsPage() {
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/camp2.png?height=400&width=600"
                   alt="Disaster Relief"
                   fill
                   className="object-cover rounded-t-lg"
@@ -146,7 +146,7 @@ export default function ProgramsPage() {
                   <Globe className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Disaster Relief</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-gray-500 mb-4">
                   Providing immediate relief and long-term recovery support
                   during disasters.
                 </p>
@@ -161,13 +161,13 @@ export default function ProgramsPage() {
 
       {/* Featured Program */}
       <section
-        className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}
+        className={`py-16 ${theme === "dark" ? "bg-gray-800 text-gray-200" : "bg-gray-50 text-gray-700"}`}
       >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 md:h-96">
               <Image
-                src="/placeholder.svg?height=600&width=800"
+                src="/youth.png?height=600&width=800"
                 alt="Women Empowerment Program"
                 fill
                 className="object-cover rounded-lg"
@@ -184,7 +184,7 @@ export default function ProgramsPage() {
               >
                 Women Empowerment
               </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+              <p className="text-lg  mb-6">
                 Our Women Empowerment program focuses on providing skills
                 training, financial literacy, and entrepreneurship opportunities
                 to women in rural communities.
@@ -262,7 +262,7 @@ export default function ProgramsPage() {
             >
               Our Approach
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-500 max-w-3xl mx-auto">
               We believe in creating sustainable impact through community-led
               initiatives and partnerships.
             </p>
@@ -275,7 +275,7 @@ export default function ProgramsPage() {
                   <Users className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Community-Led</h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-gray-500">
                   We work directly with communities to understand their needs
                   and involve them in program design and implementation.
                 </p>
@@ -300,7 +300,7 @@ export default function ProgramsPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-2">Sustainable</h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-gray-500">
                   Our programs are designed to create lasting change by building
                   local capacity and fostering self-reliance.
                 </p>
@@ -325,7 +325,7 @@ export default function ProgramsPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-2">Collaborative</h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-gray-500">
                   We partner with local organizations, government agencies, and
                   international NGOs to maximize our impact.
                 </p>
@@ -348,7 +348,7 @@ export default function ProgramsPage() {
             >
               Impact Stories
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-500 max-w-3xl mx-auto">
               Real stories of change from the communities we work with.
             </p>
           </div>
@@ -357,7 +357,7 @@ export default function ProgramsPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/sunita.jpg?height=400&width=600"
                   alt="Sunita's Story"
                   fill
                   className="object-cover"
@@ -365,7 +365,7 @@ export default function ProgramsPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2">Sunita&apos;s Story</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-gray-500 mb-4">
                   &quot;The vocational training program gave me the skills to
                   start my own tailoring business. Now I can support my family
                   and send my children to school.&quot;
@@ -379,7 +379,7 @@ export default function ProgramsPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/children.jpg?height=400&width=600"
                   alt="Gorkha School"
                   fill
                   className="object-cover"
@@ -389,7 +389,7 @@ export default function ProgramsPage() {
                 <h3 className="text-xl font-bold mb-2">
                   Rebuilding Gorkha School
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-gray-500  mb-4">
                   &quot;After the earthquake, our school was completely
                   destroyed. Yakumaya helped us rebuild a safer, better school
                   for our children.&quot;
@@ -405,7 +405,7 @@ export default function ProgramsPage() {
             <Card className="overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/camp.png?height=400&width=600"
                   alt="Health Camp"
                   fill
                   className="object-cover"
@@ -413,7 +413,7 @@ export default function ProgramsPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2">Dolakha Health Camp</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-gray-500 mb-4">
                   &quot;The health camp provided medical care to over 500 people
                   in our remote village who otherwise wouldn&apos;t have access
                   to healthcare.&quot;

@@ -37,7 +37,7 @@ export default function GetInvolvedPage() {
       <section className="relative h-[40vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=600&width=1920"
+            src="/hands.png?height=600&width=1920"
             alt="Get Involved Hero"
             fill
             className={`object-cover brightness-50 ${
@@ -160,8 +160,8 @@ export default function GetInvolvedPage() {
         className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}
       >
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className=" items-center">
+            <div className="mx-auto">
               <div
                 className={`inline-block bg-primary/10 text-primary px-4 py-1 rounded-full mb-4 ${
                   theme === "dark" ? "bg-opacity-20" : ""
@@ -194,7 +194,7 @@ export default function GetInvolvedPage() {
                 contribution.
               </p>
 
-              <div className="space-y-4 mb-6">
+              <div className="space-y-4 mb-6 text-gray-500">
                 <div className="flex items-start">
                   <div className="bg-green-100 dark:bg-green-900 p-1 rounded-full mr-3 mt-1">
                     <svg
@@ -209,7 +209,7 @@ export default function GetInvolvedPage() {
                       />
                     </svg>
                   </div>
-                  <span>$50 can provide school supplies for 5 children</span>
+                  <div className="inline">$50 can provide school supplies for 5 children</div>
                 </div>
                 <div className="flex items-start">
                   <div className="bg-green-100 dark:bg-green-900 p-1 rounded-full mr-3 mt-1">
@@ -259,66 +259,6 @@ export default function GetInvolvedPage() {
               </div>
             </div>
 
-            <Card
-              className={`border-none shadow-lg ${
-                theme === "dark" ? "bg-gray-900" : "bg-white"
-              }`}
-            >
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-6">
-                  Make a One-Time Donation
-                </h3>
-                <form className="space-y-6">
-                  <div className="grid grid-cols-3 gap-4">
-                    <Button variant="outline" className="h-16">
-                      $25
-                    </Button>
-                    <Button variant="outline" className="h-16">
-                      $50
-                    </Button>
-                    <Button variant="outline" className="h-16">
-                      $100
-                    </Button>
-                    <Button variant="outline" className="h-16">
-                      $250
-                    </Button>
-                    <Button variant="outline" className="h-16">
-                      $500
-                    </Button>
-                    <Button variant="outline" className="h-16">
-                      Other
-                    </Button>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Full Name</Label>
-                    <Input id="name" placeholder="Your full name" />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="Your email address"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message (Optional)</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Your message"
-                      rows={3}
-                    />
-                  </div>
-
-                  <Button type="submit" className="w-full">
-                    Donate Now
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -326,7 +266,7 @@ export default function GetInvolvedPage() {
       {/* Volunteer Section */}
       <section
         id="volunteer"
-        className={`py-16 ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}
+        className={`py-16 ${theme === "dark" ? "bg-gray-900 text-gray-200" : "bg-white text-gray-700"}`}
       >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -587,7 +527,7 @@ export default function GetInvolvedPage() {
 
       {/* Other Ways to Help */}
       <section
-        className={`py-16 ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}
+        className={`py-16 ${theme === "dark" ? "bg-gray-900 text-gray-200" : "bg-white text-gray-700"}`}
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">

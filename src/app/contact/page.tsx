@@ -36,7 +36,7 @@ export default function ContactPage() {
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=600&width=1920"
+            src="/contact.png?height=600&width=1920"
             alt="Contact Us Hero"
             fill
             className="object-cover brightness-50"
@@ -46,16 +46,12 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-3xl">
             <h1
-              className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 ${
-                theme === "dark" ? "text-white" : "text-gray-900"
-              }`}
+              className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white`}
             >
               Contact Us
             </h1>
             <p
-              className={`text-xl ${
-                theme === "dark" ? "text-gray-300" : "text-gray-600"
-              }`}
+              className={`text-xl text-white`}
             >
               Get in touch with us for inquiries, partnerships, or to learn more
               about our work.
@@ -66,11 +62,10 @@ export default function ContactPage() {
 
       {/* Contact Information */}
       <section
-        className={`py-16 ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}
+        className={`py-16 ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"}`}
       >
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
+           <div className="text-center mb-12">
               <h2
                 className={`text-3xl font-bold mb-6 ${
                   theme === "dark" ? "text-white" : "text-gray-900"
@@ -87,6 +82,10 @@ export default function ContactPage() {
                 about our programs, want to volunteer, or are interested in
                 partnering with us, our team is here to help.
               </p>
+           </div>
+          <div className="grid md:grid-cols-2 items-center gap-12">
+            <div>
+           
 
               <div className="space-y-6">
                 <div
@@ -99,7 +98,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Our Location</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
+                    <p className="">
                       Kathmandu, Nepal
                       <br />
                       Baluwatar, Ward No. 4
@@ -117,7 +116,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Phone</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
+                    <p className="">
                       +977 1 XXXXXXX
                       <br />
                       +977 9XXXXXXXX
@@ -135,7 +134,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
+                    <p className="">
                       info@yakumaya.org.np
                       <br />
                       support@yakumaya.org.np
@@ -153,7 +152,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Office Hours</h3>
-                    <p className="text-gray-600 dark:text-gray-400">
+                    <p className="">
                       Sunday - Friday: 9:00 AM - 5:00 PM
                       <br />
                       Saturday: Closed
@@ -162,45 +161,13 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="mt-8">
-                <h3 className="font-bold mb-4">Follow Us</h3>
-                <div className="flex space-x-4">
-                  <Link
-                    href="#"
-                    className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors"
-                  >
-                    <Facebook className="h-6 w-6 text-primary" />
-                    <span className="sr-only">Facebook</span>
-                  </Link>
-                  <Link
-                    href="#"
-                    className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors"
-                  >
-                    <Twitter className="h-6 w-6 text-primary" />
-                    <span className="sr-only">Twitter</span>
-                  </Link>
-                  <Link
-                    href="#"
-                    className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors"
-                  >
-                    <Instagram className="h-6 w-6 text-primary" />
-                    <span className="sr-only">Instagram</span>
-                  </Link>
-                  <Link
-                    href="#"
-                    className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors"
-                  >
-                    <Youtube className="h-6 w-6 text-primary" />
-                    <span className="sr-only">YouTube</span>
-                  </Link>
-                </div>
-              </div>
+            
             </div>
 
             <div>
               <Card
-                className={`border-none shadow-lg ${
-                  theme === "dark" ? "bg-gray-800" : "bg-white"
+                className={`border-none  shadow-lg ${
+                  theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-gray-900"
                 }`}
               >
                 <CardContent className="p-6">
@@ -248,18 +215,51 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
             </div>
+              <div className="mt-8">
+                <h3 className="font-bold mb-4">Follow Us</h3>
+                <div className="flex space-x-4">
+                  <Link
+                    href="#"
+                    className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors"
+                  >
+                    <Facebook className="h-6 w-6 text-primary" />
+                    <span className="sr-only">Facebook</span>
+                  </Link>
+                  <Link
+                    href="#"
+                    className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors"
+                  >
+                    <Twitter className="h-6 w-6 text-primary" />
+                    <span className="sr-only">Twitter</span>
+                  </Link>
+                  <Link
+                    href="#"
+                    className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors"
+                  >
+                    <Instagram className="h-6 w-6 text-primary" />
+                    <span className="sr-only">Instagram</span>
+                  </Link>
+                  <Link
+                    href="#"
+                    className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors"
+                  >
+                    <Youtube className="h-6 w-6 text-primary" />
+                    <span className="sr-only">YouTube</span>
+                  </Link>
+                </div>
+              </div>
           </div>
         </div>
       </section>
 
       {/* Map Section */}
       <section
-        className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}
+        className={`py-16 ${theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-50 text-gray-900"}`}
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Find Us</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg  max-w-3xl mx-auto">
               Visit our office in Kathmandu, Nepal.
             </p>
           </div>
@@ -286,14 +286,14 @@ export default function ContactPage() {
 
       {/* FAQ Section */}
       <section
-        className={`py-16 ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}
+        className={`py-16 ${theme === "dark" ? "bg-gray-900 text-gray-300" : "bg-white text-gray-700"}`}
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg  max-w-3xl mx-auto">
               Find answers to common questions about our organization and work.
             </p>
           </div>
@@ -304,7 +304,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold mb-2">
                   How can I donate to your organization?
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="">
                   You can donate through our website, bank transfer, or visit
                   our office in person. All donation methods are secure and
                   transparent.
@@ -317,7 +317,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold mb-2">
                   Can I volunteer with your organization?
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="">
                   Yes, we welcome volunteers! Please fill out the volunteer form
                   on our &quot;Get Involved&quot; page or contact us directly to
                   discuss opportunities.
@@ -330,7 +330,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold mb-2">
                   How is my donation used?
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="">
                   Your donations directly support our programs in education,
                   healthcare, livelihood, and disaster relief. We maintain
                   transparency through regular financial reports.
@@ -343,7 +343,7 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold mb-2">
                   Can my organization partner with you?
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="">
                   We&apos;re always open to partnerships that align with our
                   mission. Please contact us to discuss potential collaboration
                   opportunities.

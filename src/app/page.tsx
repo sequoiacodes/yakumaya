@@ -35,7 +35,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/homehero.jpg?height=1080&width=1920"
             alt="Hero Image"
             fill
             className={`object-cover brightness-50 ${
@@ -75,8 +75,8 @@ export default function Home() {
         className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}
       >
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid md:grid-cols-3 gap-12 items-center">
+            <div className="md:col-span-2">
               <h2
                 className={`text-3xl font-bold mb-6 ${
                   theme === "dark" ? "text-white" : "text-gray-900"
@@ -110,12 +110,13 @@ export default function Home() {
                 Learn more about us <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
-            <div className="relative h-80 md:h-96">
+            <div className="relative w-60 h-80 bg-transparent ">
               <Image
-                src="/placeholder.svg?height=600&width=800"
+                src="/ceo.png?height=500&width=400"
                 alt="Our Mission"
-                fill
-                className="object-cover rounded-lg"
+                width={400}
+                height={500}
+                className="object-cover rounded-2xl bg-contain shadow-lg shadow-gray-950"
               />
             </div>
           </div>
@@ -300,7 +301,7 @@ export default function Home() {
             </div>
             <div className="relative h-80 md:h-96 order-1 md:order-2">
               <Image
-                src="/placeholder.svg?height=600&width=800"
+                src="/children.jpg?height=600&width=800"
                 alt="School Rebuilding Project"
                 fill
                 className="object-cover rounded-lg"
@@ -348,21 +349,21 @@ export default function Home() {
               title="Health Camp Successfully Conducted in Dolakha"
               excerpt="Our team conducted a free health camp in Dolakha district, providing medical services to over 500 people."
               date="May 15, 2023"
-              imageUrl="/placeholder.svg?height=400&width=600"
+              imageUrl="/camp.png?height=400&width=600"
               slug="/news/health-camp-dolakha"
             />
             <NewsCard
               title="New Vocational Training Center Inaugurated"
               excerpt="          We're proud to announce the opening of our new vocational training center in Kathmandu, offering skills development programs."
               date="April 28, 2023"
-              imageUrl="/placeholder.svg?height=400&width=600"
+              imageUrl="/voca.png?height=400&width=600"
               slug="/news/vocational-training-center"
             />
             <NewsCard
               title="Annual Report 2022-2023 Released"
               excerpt="Our annual report highlighting our achievements, challenges, and financial transparency for the past year is now available."
               date="April 10, 2023"
-              imageUrl="/placeholder.svg?height=400&width=600"
+              imageUrl="/report.png?height=400&width=600"
               slug="/news/annual-report-2022-2023"
             />
           </div>
@@ -398,7 +399,7 @@ export default function Home() {
                 date: "June 15, 2023",
                 description:
                   "Join us for an evening of inspiration and giving back at our Annual Fundraising Gala in Kathmandu.",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/gala.png?height=400&width=600",
                 buttonText: "Register Now",
               },
               {
@@ -406,7 +407,7 @@ export default function Home() {
                 date: "July 8-10, 2023",
                 description:
                   "A three-day health camp providing free medical services in Rasuwa district.",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/camp.png?height=400&width=600",
                 buttonText: "Learn More",
               },
               {
@@ -414,7 +415,7 @@ export default function Home() {
                 date: "July 25, 2023",
                 description:
                   "Empowering young leaders with skills and knowledge to drive positive change in their communities.",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/youth.png?height=400&width=600",
                 buttonText: "Register Now",
               },
             ].map((event, index) => (

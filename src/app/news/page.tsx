@@ -84,7 +84,7 @@ export default function NewsPage() {
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=600&width=1920"
+            src="/news.png?height=600&width=1920"
             alt="News Hero"
             fill
             className={`object-cover brightness-50 ${
@@ -414,7 +414,7 @@ export default function NewsPage() {
                       <div key={article.id} className="flex gap-4">
                         <div className="relative w-20 h-20 flex-shrink-0">
                           <Image
-                            src={article.imageUrl || "/placeholder.svg"}
+                            src={article.imageUrl || "/news.png"}
                             alt={article.title}
                             fill
                             className="object-cover rounded-md"

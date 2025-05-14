@@ -25,7 +25,7 @@ export default function SuccessStoriesPage() {
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=600&width=1920"
+            src="/story1.png?height=600&width=1920"
             alt="Success Stories Hero"
             fill
             className={`object-cover brightness-50 ${
@@ -83,7 +83,7 @@ export default function SuccessStoriesPage() {
                     category: "Livelihood",
                     location: "Kathmandu",
                     date: "May 2023",
-                    image: "/placeholder.svg?height=400&width=600&text=Sunita",
+                    image: "/sunita.jpg?height=400&width=600&text=Sunita",
                     slug: "sunita-financial-independence",
                   },
                   {
@@ -94,7 +94,7 @@ export default function SuccessStoriesPage() {
                     location: "Gorkha District",
                     date: "April 2023",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Gorkha School",
+                      "/children.jpg?height=400&width=600&text=Gorkha School",
                     slug: "gorkha-school-rebuilding",
                   },
                   {
@@ -106,7 +106,7 @@ export default function SuccessStoriesPage() {
                     location: "Dolakha District",
                     date: "March 2023",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Health Camp",
+                      "/camp.png?height=400&width=600&text=Health Camp",
                     slug: "dolakha-health-camp",
                   },
                   {
@@ -117,7 +117,7 @@ export default function SuccessStoriesPage() {
                     location: "Saptari District",
                     date: "February 2023",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Ram's Home",
+                      "/helpfood.jpg?height=400&width=600&text=Ram's Home",
                     slug: "rams-new-home",
                   },
                   {
@@ -128,7 +128,7 @@ export default function SuccessStoriesPage() {
                     location: "Kavre District",
                     date: "January 2023",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Women's Cooperative",
+                      "/story2.png?height=400&width=600&text=Women's Cooperative",
                     slug: "womens-cooperative",
                   },
                   {
@@ -138,7 +138,7 @@ export default function SuccessStoriesPage() {
                     category: "Education",
                     location: "Sindhupalchok District",
                     date: "December 2022",
-                    image: "/placeholder.svg?height=400&width=600&text=Raju",
+                    image: "/story3.png?height=400&width=600&text=Raju",
                     slug: "raju-education-journey",
                   },
                   {
@@ -149,7 +149,7 @@ export default function SuccessStoriesPage() {
                     location: "Bajura District",
                     date: "November 2022",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Clean Water",
+                      "/story4.png?height=400&width=600&text=Clean Water",
                     slug: "clean-water-bajura",
                   },
                   {
@@ -160,7 +160,7 @@ export default function SuccessStoriesPage() {
                     location: "Humla District",
                     date: "October 2022",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Solar Power",
+                      "/story2.png?height=400&width=600&text=Solar Power",
                     slug: "solar-power-humla",
                   },
                   {
@@ -172,7 +172,7 @@ export default function SuccessStoriesPage() {
                     location: "Chitwan District",
                     date: "September 2022",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Maya's Farm",
+                      "/profile1.png?height=400&width=600&text=Maya's Farm",
                     slug: "mayas-organic-farm",
                   },
                 ].map((story, index) => (
@@ -184,7 +184,7 @@ export default function SuccessStoriesPage() {
                   >
                     <div className="relative h-48">
                       <Image
-                        src={story.image || "/placeholder.svg"}
+                        src={story.image || "/news.png"}
                         alt={story.title}
                         fill
                         className="object-cover"
@@ -256,7 +256,7 @@ export default function SuccessStoriesPage() {
                     location: "Gorkha District",
                     date: "April 2023",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Gorkha School",
+                      "/news.png?height=400&width=600&text=Gorkha School",
                     slug: "gorkha-school-rebuilding",
                   },
                   {
@@ -266,7 +266,7 @@ export default function SuccessStoriesPage() {
                     category: "Education",
                     location: "Sindhupalchok District",
                     date: "December 2022",
-                    image: "/placeholder.svg?height=400&width=600&text=Raju",
+                    image: "/news.png?height=400&width=600&text=Raju",
                     slug: "raju-education-journey",
                   },
                   {
@@ -277,7 +277,7 @@ export default function SuccessStoriesPage() {
                     location: "Dhading District",
                     date: "August 2022",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Digital Learning",
+                      "/news.png?height=400&width=600&text=Digital Learning",
                     slug: "digital-learning-rural-school",
                   },
                 ].map((story, index) => (
@@ -289,7 +289,7 @@ export default function SuccessStoriesPage() {
                   >
                     <div className="relative h-48">
                       <Image
-                        src={story.image || "/placeholder.svg"}
+                        src={story.image || "/news.png"}
                         alt={story.title}
                         fill
                         className="object-cover"
@@ -362,7 +362,7 @@ export default function SuccessStoriesPage() {
                     location: "Dolakha District",
                     date: "March 2023",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Health Camp",
+                      "/news.png?height=400&width=600&text=Health Camp",
                     slug: "dolakha-health-camp",
                   },
                   {
@@ -373,7 +373,7 @@ export default function SuccessStoriesPage() {
                     location: "Bajura District",
                     date: "November 2022",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Clean Water",
+                      "/news.png?height=400&width=600&text=Clean Water",
                     slug: "clean-water-bajura",
                   },
                   {
@@ -384,7 +384,7 @@ export default function SuccessStoriesPage() {
                     location: "Multiple Districts",
                     date: "July 2022",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Mobile Clinic",
+                      "/news.png?height=400&width=600&text=Mobile Clinic",
                     slug: "mobile-health-clinic",
                   },
                 ].map((story, index) => (
@@ -396,7 +396,7 @@ export default function SuccessStoriesPage() {
                   >
                     <div className="relative h-48">
                       <Image
-                        src={story.image || "/placeholder.svg"}
+                        src={story.image || "/news.png"}
                         alt={story.title}
                         fill
                         className="object-cover"
@@ -467,7 +467,7 @@ export default function SuccessStoriesPage() {
                     category: "Livelihood",
                     location: "Kathmandu",
                     date: "May 2023",
-                    image: "/placeholder.svg?height=400&width=600&text=Sunita",
+                    image: "/news.png?height=400&width=600&text=Sunita",
                     slug: "sunita-financial-independence",
                   },
                   {
@@ -478,7 +478,7 @@ export default function SuccessStoriesPage() {
                     location: "Kavre District",
                     date: "January 2023",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Women's Cooperative",
+                      "/news.png?height=400&width=600&text=Women's Cooperative",
                     slug: "womens-cooperative",
                   },
                   {
@@ -490,7 +490,7 @@ export default function SuccessStoriesPage() {
                     location: "Chitwan District",
                     date: "September 2022",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Maya's Farm",
+                      "/news.png?height=400&width=600&text=Maya's Farm",
                     slug: "mayas-organic-farm",
                   },
                 ].map((story, index) => (
@@ -502,7 +502,7 @@ export default function SuccessStoriesPage() {
                   >
                     <div className="relative h-48">
                       <Image
-                        src={story.image || "/placeholder.svg"}
+                        src={story.image || "/news.png"}
                         alt={story.title}
                         fill
                         className="object-cover"
@@ -574,7 +574,7 @@ export default function SuccessStoriesPage() {
                     location: "Saptari District",
                     date: "February 2023",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Ram's Home",
+                      "/news.png?height=400&width=600&text=Ram's Home",
                     slug: "rams-new-home",
                   },
                   {
@@ -585,7 +585,7 @@ export default function SuccessStoriesPage() {
                     location: "Humla District",
                     date: "October 2022",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Solar Power",
+                      "/news.png?height=400&width=600&text=Solar Power",
                     slug: "solar-power-humla",
                   },
                   {
@@ -597,7 +597,7 @@ export default function SuccessStoriesPage() {
                     location: "Humla District",
                     date: "January 2023",
                     image:
-                      "/placeholder.svg?height=400&width=600&text=Winter Relief",
+                      "/news.png?height=400&width=600&text=Winter Relief",
                     slug: "winter-relief-program",
                   },
                 ].map((story, index) => (
@@ -609,7 +609,7 @@ export default function SuccessStoriesPage() {
                   >
                     <div className="relative h-48">
                       <Image
-                        src={story.image || "/placeholder.svg"}
+                        src={story.image || "/news.png"}
                         alt={story.title}
                         fill
                         className="object-cover"
@@ -681,7 +681,7 @@ export default function SuccessStoriesPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 md:h-96">
               <Image
-                src="/placeholder.svg?height=600&width=800&text=Featured Story"
+                src="/news.png?height=600&width=800&text=Featured Story"
                 alt="Featured Story"
                 fill
                 className="object-cover rounded-lg"

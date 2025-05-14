@@ -19,7 +19,7 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Our team conducted a free health camp in Dolakha district, providing medical services to over 500 people from remote villages who otherwise have limited access to healthcare.",
     content: `
-      <p>On May 15, 2023, Akumaya Helping Hands Foundation Nepal successfully conducted a three-day health camp in Dolakha district, providing essential medical services to over 500 people from remote villages.</p>
+      <p>On May 15, 2023, Yakumaya Helping Hands Foundation Nepal successfully conducted a three-day health camp in Dolakha district, providing essential medical services to over 500 people from remote villages.</p>
       
       <p>The health camp was organized in collaboration with local health authorities and volunteer doctors from Kathmandu. Services provided included general health check-ups, eye examinations, dental care, and awareness sessions on preventive healthcare.</p>
       
@@ -32,7 +32,7 @@ export const newsArticles: NewsArticle[] = [
       <p>We extend our heartfelt gratitude to all the medical professionals, volunteers, and donors who made this health camp possible.</p>
     `,
     date: "May 15, 2023",
-    imageUrl: "/placeholder.svg?height=400&width=600&text=Health Camp",
+    imageUrl: "/camp2.png?height=400&width=600&text=Health Camp",
     categories: ["Healthcare", "Events"],
     tags: ["Health Camp", "Dolakha", "Healthcare", "Medical Services"],
     author: "Admin",
@@ -44,20 +44,20 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "We're proud to announce the opening of our new vocational training center in Kathmandu, offering skills development programs for underprivileged youth and women.",
     content: `
-      <p>Akumaya Helping Hands Foundation Nepal is proud to announce the inauguration of our new Vocational Training Center in Kathmandu on April 28, 2023. The center will offer skills development programs for underprivileged youth and women, focusing on employable skills that can lead to sustainable livelihoods.</p>
+      <p>Yakumaya Helping Hands Foundation Nepal is proud to announce the inauguration of our new Vocational Training Center in Kathmandu on April 28, 2023. The center will offer skills development programs for underprivileged youth and women, focusing on employable skills that can lead to sustainable livelihoods.</p>
       
       <p>The center was inaugurated by Mr. Binod Chaudhary, a prominent business leader and philanthropist, in the presence of local government officials, community leaders, and beneficiaries.</p>
       
       <p>The facility is equipped with modern training equipment and will initially offer courses in tailoring, computer skills, beauty and wellness, and hospitality. Each course is designed to be practical and market-oriented, with a focus on both technical skills and entrepreneurship.</p>
       
-      <p>"This center represents our commitment to economic empowerment through skills development. By providing quality vocational training, we aim to help individuals become self-reliant and contribute to their communities," said Sunita Gurung, Program Director at Akumaya Foundation.</p>
+      <p>"This center represents our commitment to economic empowerment through skills development. By providing quality vocational training, we aim to help individuals become self-reliant and contribute to their communities," said Sunita Gurung, Program Director at Yakumaya Foundation.</p>
       
       <p>The first batch of 50 trainees has already been enrolled, with classes set to begin next week. The foundation plans to train over 200 individuals in the first year of operation.</p>
       
       <p>This initiative is supported by various corporate partners and individual donors who share our vision of creating sustainable livelihood opportunities for marginalized communities.</p>
     `,
     date: "April 28, 2023",
-    imageUrl: "/placeholder.svg?height=400&width=600&text=Training Center",
+    imageUrl: "/voca.png?height=400&width=600&text=Training Center",
     categories: ["Livelihood", "Education"],
     tags: ["Vocational Training", "Skills Development", "Women Empowerment", "Youth"],
     author: "Admin",
@@ -69,7 +69,7 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Our annual report highlighting our achievements, challenges, and financial transparency for the past year is now available for public viewing.",
     content: `
-      <p>Akumaya Helping Hands Foundation Nepal is pleased to announce the release of our Annual Report for the fiscal year 2022-2023. The report provides a comprehensive overview of our programs, achievements, challenges, and financial statements for the past year.</p>
+      <p>Yakumaya Helping Hands Foundation Nepal is pleased to announce the release of our Annual Report for the fiscal year 2022-2023. The report provides a comprehensive overview of our programs, achievements, challenges, and financial statements for the past year.</p>
       
       <p>Key highlights from the report include:</p>
       
@@ -91,7 +91,7 @@ export const newsArticles: NewsArticle[] = [
       <p>We extend our sincere gratitude to all our supporters, partners, and team members who contributed to our work over the past year.</p>
     `,
     date: "April 10, 2023",
-    imageUrl: "/placeholder.svg?height=400&width=600&text=Annual Report",
+    imageUrl: "/report.png?height=400&width=600&text=Annual Report",
     categories: ["Announcements", "Reports"],
     tags: ["Annual Report", "Transparency", "Accountability"],
     author: "Admin",
@@ -103,7 +103,7 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "We've successfully completed the rebuilding of Shree Janata Secondary School in Sindhupalchok, which was severely damaged during the 2015 earthquake.",
     content: `
-      <p>Akumaya Helping Hands Foundation Nepal is delighted to announce the successful completion of our school rebuilding project in Sindhupalchok district. The Shree Janata Secondary School, which was severely damaged during the 2015 earthquake, has been rebuilt and is now ready to welcome students back to a safe learning environment.</p>
+      <p>Yakumaya Helping Hands Foundation Nepal is delighted to announce the successful completion of our school rebuilding project in Sindhupalchok district. The Shree Janata Secondary School, which was severely damaged during the 2015 earthquake, has been rebuilt and is now ready to welcome students back to a safe learning environment.</p>
       
       <p>The newly constructed school features:</p>
       
@@ -126,7 +126,7 @@ export const newsArticles: NewsArticle[] = [
       <p>We extend our heartfelt gratitude to our donors and partners who made this project possible, and to the community for their active participation and support throughout the implementation.</p>
     `,
     date: "March 25, 2023",
-    imageUrl: "/placeholder.svg?height=400&width=600&text=School Rebuilding",
+    imageUrl: "/children.jpg?height=400&width=600&text=School Rebuilding",
     categories: ["Education", "Disaster Relief"],
     tags: ["School Rebuilding", "Earthquake Recovery", "Education", "Sindhupalchok"],
     author: "Admin",
@@ -138,7 +138,7 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Our new Women's Entrepreneurship Program has launched in Kavre district, aiming to support 100 women in starting and growing their own businesses.",
     content: `
-      <p>Akumaya Helping Hands Foundation Nepal has launched a new Women's Entrepreneurship Program in Kavre district, designed to support 100 women in starting and growing their own businesses. The program was officially launched on March 8, 2023, coinciding with International Women's Day.</p>
+      <p>Yakumaya Helping Hands Foundation Nepal has launched a new Women's Entrepreneurship Program in Kavre district, designed to support 100 women in starting and growing their own businesses. The program was officially launched on March 8, 2023, coinciding with International Women's Day.</p>
       
       <p>The comprehensive program includes:</p>
       
@@ -162,7 +162,7 @@ export const newsArticles: NewsArticle[] = [
       <p>We look forward to sharing the success stories of these women entrepreneurs in the coming months.</p>
     `,
     date: "March 8, 2023",
-    imageUrl: "/placeholder.svg?height=400&width=600&text=Women Entrepreneurs",
+    imageUrl: "/profile1.png?height=400&width=600&text=Women Entrepreneurs",
     categories: ["Livelihood", "Women Empowerment"],
     tags: ["Women Empowerment", "Entrepreneurship", "Livelihood", "Kavre"],
     author: "Admin",
@@ -174,7 +174,7 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "We're excited to announce our new partnership with the Global Education Fund to expand our education programs in rural Nepal.",
     content: `
-      <p>Akumaya Helping Hands Foundation Nepal is pleased to announce a new strategic partnership with the Global Education Fund (GEF) to expand our education programs in rural Nepal. The partnership was formalized through a Memorandum of Understanding signed on February 20, 2023.</p>
+      <p>Yakumaya Helping Hands Foundation Nepal is pleased to announce a new strategic partnership with the Global Education Fund (GEF) to expand our education programs in rural Nepal. The partnership was formalized through a Memorandum of Understanding signed on February 20, 2023.</p>
       
       <p>Through this collaboration, we will implement a three-year project titled "Quality Education for Rural Nepal," which aims to improve educational outcomes for children in underserved rural communities. The project will be implemented in 20 schools across 5 districts.</p>
       
@@ -189,16 +189,16 @@ export const newsArticles: NewsArticle[] = [
         <li>School infrastructure improvements</li>
       </ul>
       
-      <p>"This partnership represents a significant step forward in our efforts to ensure quality education for all children, regardless of their geographic location or socioeconomic background," said Rajesh Sharma, Executive Director of Akumaya Foundation.</p>
+      <p>"This partnership represents a significant step forward in our efforts to ensure quality education for all children, regardless of their geographic location or socioeconomic background," said Rajesh Sharma, Executive Director of Yakumaya Foundation.</p>
       
-      <p>The Global Education Fund will provide technical expertise and financial support, while Akumaya Foundation will lead the implementation on the ground, leveraging our deep understanding of local contexts and established community relationships.</p>
+      <p>The Global Education Fund will provide technical expertise and financial support, while Yakumaya Foundation will lead the implementation on the ground, leveraging our deep understanding of local contexts and established community relationships.</p>
       
-      <p>"We are excited to partner with Akumaya Foundation, whose commitment to education and community-led development aligns perfectly with our mission. Together, we can make a meaningful difference in the lives of thousands of children in rural Nepal," said Sarah Johnson, Regional Director of GEF.</p>
+      <p>"We are excited to partner with Yakumaya Foundation, whose commitment to education and community-led development aligns perfectly with our mission. Together, we can make a meaningful difference in the lives of thousands of children in rural Nepal," said Sarah Johnson, Regional Director of GEF.</p>
       
       <p>The project is expected to benefit approximately 5,000 students and 200 teachers over the three-year period.</p>
     `,
     date: "February 20, 2023",
-    imageUrl: "/placeholder.svg?height=400&width=600&text=Partnership",
+    imageUrl: "/gala.png?height=400&width=600&text=Partnership",
     categories: ["Education", "Partnerships"],
     tags: ["Education", "Partnership", "Rural Development"],
     author: "Admin",
@@ -210,7 +210,7 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Our team has successfully completed the distribution of winter relief supplies to 500 families in the remote district of Humla.",
     content: `
-      <p>Akumaya Helping Hands Foundation Nepal has successfully completed the distribution of winter relief supplies to 500 vulnerable families in the remote district of Humla. The distribution, which took place from January 15-25, 2023, was part of our annual Winter Relief Program targeting high-altitude communities that face extreme cold conditions.</p>
+      <p>Yakumaya Helping Hands Foundation Nepal has successfully completed the distribution of winter relief supplies to 500 vulnerable families in the remote district of Humla. The distribution, which took place from January 15-25, 2023, was part of our annual Winter Relief Program targeting high-altitude communities that face extreme cold conditions.</p>
       
       <p>Each family received a relief package containing:</p>
       
@@ -234,7 +234,7 @@ export const newsArticles: NewsArticle[] = [
       <p>This initiative was made possible through the generous support of our donors and the dedication of our field team and local volunteers.</p>
     `,
     date: "January 30, 2023",
-    imageUrl: "/placeholder.svg?height=400&width=600&text=Winter Relief",
+    imageUrl: "/helpfood.jpg?height=400&width=600&text=Winter Relief",
     categories: ["Disaster Relief", "Humanitarian Aid"],
     tags: ["Winter Relief", "Humla", "Humanitarian Aid"],
     author: "Admin",
@@ -246,7 +246,7 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Our recent Youth Leadership Workshop brought together 50 young leaders from across Nepal for a week of intensive training and networking.",
     content: `
-      <p>Akumaya Helping Hands Foundation Nepal recently conducted a Youth Leadership Workshop that brought together 50 young leaders from across Nepal for a week of intensive training, skill-building, and networking. The workshop, held from January 10-16, 2023, aimed to empower youth to become change-makers in their communities.</p>
+      <p>Yakumaya Helping Hands Foundation Nepal recently conducted a Youth Leadership Workshop that brought together 50 young leaders from across Nepal for a week of intensive training, skill-building, and networking. The workshop, held from January 10-16, 2023, aimed to empower youth to become change-makers in their communities.</p>
       
       <p>The participants, aged 18-25, represented diverse geographic regions and socioeconomic backgrounds but shared a common commitment to community development and social change.</p>
       
@@ -273,7 +273,7 @@ export const newsArticles: NewsArticle[] = [
       <p>"This workshop has been transformative. I've gained not only new skills but also the confidence to lead change in my community. The network of like-minded young people I've connected with here is invaluable," said Rajan Tamang, a participant from Dhading district.</p>
     `,
     date: "January 18, 2023",
-    imageUrl: "/placeholder.svg?height=400&width=600&text=Youth Workshop",
+    imageUrl: "/youth.png?height=400&width=600&text=Youth Workshop",
     categories: ["Education", "Youth Development"],
     tags: ["Youth Leadership", "Workshop", "Capacity Building"],
     author: "Admin",
@@ -285,7 +285,7 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Our new clean water project in Bajura district will provide safe drinking water to over 1,000 people in three remote villages.",
     content: `
-      <p>Akumaya Helping Hands Foundation Nepal is proud to announce the successful completion and inauguration of a clean water project in Bajura district. The project, completed in December 2022, will provide safe drinking water to over 1,000 people in three remote villages that previously had limited access to clean water sources.
+      <p>Yakumaya Helping Hands Foundation Nepal is proud to announce the successful completion and inauguration of a clean water project in Bajura district. The project, completed in December 2022, will provide safe drinking water to over 1,000 people in three remote villages that previously had limited access to clean water sources.
 
       <p>The water system includes:</p>
       
@@ -306,19 +306,19 @@ export const newsArticles: NewsArticle[] = [
       <p>This initiative was made possible through the generous support of our donors and the active participation of the local community.</p>
     `,
     date: "December 20, 2022",
-    imageUrl: "/placeholder.svg?height=400&width=600&text=Clean Water",
+    imageUrl: "/homehero.jpg?height=400&width=600&text=Clean Water",
     categories: ["Healthcare", "Infrastructure"],
     tags: ["Clean Water", "Bajura", "Health", "Infrastructure"],
     author: "Admin",
   },
   {
     id: 10,
-    title: "Akumaya Foundation Celebrates 10th Anniversary",
+    title: "Yakumaya Foundation Celebrates 10th Anniversary",
     slug: "10th-anniversary-celebration",
     excerpt:
-      "Akumaya Helping Hands Foundation Nepal marked its 10th anniversary with a celebration highlighting a decade of impact across Nepal.",
+      "Yakumaya Helping Hands Foundation Nepal marked its 10th anniversary with a celebration highlighting a decade of impact across Nepal.",
     content: `
-      <p>Akumaya Helping Hands Foundation Nepal celebrated its 10th anniversary on December 10, 2022, marking a decade of dedicated service and impact across Nepal. The milestone was commemorated with an event in Kathmandu that brought together staff, beneficiaries, partners, donors, and government representatives.</p>
+      <p>Yakumaya Helping Hands Foundation Nepal celebrated its 10th anniversary on December 10, 2022, marking a decade of dedicated service and impact across Nepal. The milestone was commemorated with an event in Kathmandu that brought together staff, beneficiaries, partners, donors, and government representatives.</p>
       
       <p>The celebration featured:</p>
       
@@ -330,7 +330,7 @@ export const newsArticles: NewsArticle[] = [
         <li>Launch of a commemorative publication documenting our 10-year history</li>
       </ul>
       
-      <p>Since its establishment in 2012, Akumaya Foundation has implemented over 100 projects across 25 districts in Nepal, directly benefiting more than 100,000 individuals. Our work has spanned education, healthcare, livelihood, disaster relief, and women empowerment.</p>
+      <p>Since its establishment in 2012, Yakumaya Foundation has implemented over 100 projects across 25 districts in Nepal, directly benefiting more than 100,000 individuals. Our work has spanned education, healthcare, livelihood, disaster relief, and women empowerment.</p>
       
       <p>"As we reflect on the past decade, we are filled with gratitude for all those who have been part of this journey – our dedicated team, generous donors, committed partners, and most importantly, the communities we serve who have welcomed us and worked alongside us," said Rajesh Sharma, Executive Director and founder of the organization.</p>
       
@@ -341,7 +341,7 @@ export const newsArticles: NewsArticle[] = [
       <p>The foundation expressed its sincere gratitude to all stakeholders who have contributed to its growth and impact over the past decade.</p>
     `,
     date: "December 12, 2022",
-    imageUrl: "/placeholder.svg?height=400&width=600&text=10th Anniversary",
+    imageUrl: "/logoYa.png?height=400&width=600&text=10th Anniversary",
     categories: ["Announcements", "Events"],
     tags: ["Anniversary", "Celebration", "Milestone"],
     author: "Admin",

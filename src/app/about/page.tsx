@@ -20,7 +20,7 @@ export default function AboutPage() {
       <section className="relative h-[50vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=800&width=1920"
+            src="/about.png?height=800&width=1920"
             alt="About Us Hero"
             fill
             className="object-cover brightness-50"
@@ -83,7 +83,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-80 md:h-96">
               <Image
-                src="/placeholder.svg?height=600&width=800"
+                src="/aboutstory.png?height=600&width=800"
                 alt="Our Story"
                 fill
                 className={`object-cover rounded-lg ${
@@ -263,22 +263,22 @@ export default function AboutPage() {
               {
                 name: "Rajesh Sharma",
                 title: "Executive Director",
-                image: "/placeholder.svg?height=300&width=300",
+                image: "/slider2.png?height=300&width=300",
               },
               {
                 name: "Sunita Gurung",
                 title: "Program Director",
-                image: "/placeholder.svg?height=300&width=300",
+                image: "/profile1.png?height=300&width=300",
               },
               {
                 name: "Binod Thapa",
                 title: "Finance Manager",
-                image: "/placeholder.svg?height=300&width=300",
+                image: "/slider3.png?height=300&width=300",
               },
               {
                 name: "Anita Rai",
                 title: "Communications Officer",
-                image: "/placeholder.svg?height=300&width=300",
+                image: "/slider1.png?height=300&width=300",
               },
             ].map((member, index) => (
               <div
@@ -303,11 +303,11 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <Button asChild>
               <Link href="/team">View Full Team</Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
