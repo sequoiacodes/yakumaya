@@ -2,21 +2,14 @@ import { newsArticles } from "@/data/news-data";
 import { notFound } from "next/navigation";
 import NewsDetailClient from "./news-detail-client";
 
-// Import NewsArticle type from news-data
-import { NewsArticle } from "@/data/news-data";
-
-interface NewsDetailPageProps {
-  params: {
-    slug: string;
-  }
-}
-
-export default async function NewsDetailPage(props: NewsDetailPageProps) {
-  // Access slug from props.params
-  const { slug } = props.params;
+// Make the component async and treat params as a Promise
+export default async function NewsDetailPage({ params }: { params: { slug: string } }) {
+  // Await the params if it's a Promise
+  const resolvedParams = params instanceof Promise ? await params : params;
+  const slug = resolvedParams.slug;
   
   // Find the article
-    const article: NewsArticle = newsArticles.find((article) => article.slug === slug)!;
+  const article = newsArticles.find((article) => article.slug === slug);
   
   // If article not found, show 404
   if (!article) {
@@ -24,7 +17,7 @@ export default async function NewsDetailPage(props: NewsDetailPageProps) {
   }
 
   // Get related articles
-  const relatedArticles: NewsArticle[] = newsArticles
+  const relatedArticles = newsArticles
     .filter(
       (a) =>
         a.id !== article.id &&
