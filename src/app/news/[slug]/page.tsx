@@ -1,18 +1,15 @@
 import { newsArticles } from "@/data/news-data";
 import { notFound } from "next/navigation";
-
-import type { Metadata } from "next";
 import NewsDetailClient from "./news-detail-client";
+import type { Metadata } from "next";
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined }
+// Use the correct type for params
+type Props = {
+  params: { slug: string }
 }
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = newsArticles.find((article) => article.slug === params.slug);
   
   if (!article) {
@@ -33,7 +30,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function NewsDetailPage({ params }: PageProps) {
+// Use the same Props type for the page component
+export default function NewsDetailPage({ params }: Props) {
   // Find the article
   const article = newsArticles.find((article) => article.slug === params.slug);
   
