@@ -97,7 +97,7 @@ export default function NewsPage() {
           <div className="max-w-3xl">
             <h1
               className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 ${
-                theme === "dark" ? "text-white" : "text-gray-900"
+                theme === "dark" ? "text-white" : "text-gray-200"
               }`}
             >
               News & Updates

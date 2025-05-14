@@ -1,14 +1,14 @@
 export interface NewsArticle {
-  id: number
-  title: string
-  slug: string
-  excerpt: string
-  content: string
-  date: string
-  imageUrl: string
-  categories: string[]
-  tags: string[]
-  author: string
+  id: number;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  imageUrl: string;
+  categories: string[];
+  tags: string[];
+  author: string;
 }
 
 export const newsArticles: NewsArticle[] = [
@@ -59,7 +59,12 @@ export const newsArticles: NewsArticle[] = [
     date: "April 28, 2023",
     imageUrl: "/voca.png?height=400&width=600&text=Training Center",
     categories: ["Livelihood", "Education"],
-    tags: ["Vocational Training", "Skills Development", "Women Empowerment", "Youth"],
+    tags: [
+      "Vocational Training",
+      "Skills Development",
+      "Women Empowerment",
+      "Youth",
+    ],
     author: "Admin",
   },
   {
@@ -73,13 +78,14 @@ export const newsArticles: NewsArticle[] = [
       
       <p>Key highlights from the report include:</p>
       
-      <ul>
-        <li>Successfully implemented 15 projects across 10 districts in Nepal</li>
-        <li>Directly benefited over 10,000 individuals through various programs</li>
-        <li>Rebuilt 5 schools damaged by natural disasters</li>
-        <li>Conducted 8 health camps serving over 3,000 patients</li>
-        <li>Provided vocational training to 300 women and youth</li>
-        <li>Expanded our disaster preparedness program to 5 new communities</li>
+      <ul class="list-disc space-y-2 pl-6">
+        <li class="">Implemented 20 community development projects across 5 districts</li>
+        <li class="">Successfully implemented 15 projects across 10 districts in Nepal</li>
+        <li class="">Directly benefited over 10,000 individuals through various programs</li>
+        <li class="">Rebuilt 5 schools damaged by natural disasters</li>
+        <li class="">Conducted 8 health camps serving over 3,000 patients</li>
+        <li class="">Provided vocational training to 300 women and youth</li>
+        <li class="">Expanded our disaster preparedness program to 5 new communities</li>
       </ul>
       
       <p>The report also details our financial management, with complete transparency on how funds were allocated and utilized across different programs and operational expenses.</p>
@@ -107,14 +113,14 @@ export const newsArticles: NewsArticle[] = [
       
       <p>The newly constructed school features:</p>
       
-      <ul>
-        <li>10 earthquake-resistant classrooms</li>
-        <li>A computer lab with 20 computers</li>
-        <li>A science laboratory</li>
-        <li>A library with over 1,000 books</li>
-        <li>Separate toilet facilities for boys and girls</li>
-        <li>Clean drinking water facilities</li>
-        <li>A playground with sports equipment</li>
+      <ul class="list-disc space-y-2 pl-6">
+        <li class="">10 earthquake-resistant classrooms</li>
+        <li class="">A computer lab with 20 computers</li>
+        <li class="">A science laboratory</li>
+        <li class="">A library with over 1,000 books</li>
+        <li class="">Separate toilet facilities for boys and girls</li>
+        <li class="">Clean drinking water facilities</li>
+        <li class="">A playground with sports equipment</li>
       </ul>
       
       <p>The school was handed over to the local community in a ceremony attended by government officials, community leaders, teachers, students, and parents. The event marked a significant milestone in our ongoing efforts to rebuild educational infrastructure damaged by the earthquake.</p>
@@ -128,7 +134,12 @@ export const newsArticles: NewsArticle[] = [
     date: "March 25, 2023",
     imageUrl: "/children.jpg?height=400&width=600&text=School Rebuilding",
     categories: ["Education", "Disaster Relief"],
-    tags: ["School Rebuilding", "Earthquake Recovery", "Education", "Sindhupalchok"],
+    tags: [
+      "School Rebuilding",
+      "Earthquake Recovery",
+      "Education",
+      "Sindhupalchok",
+    ],
     author: "Admin",
   },
   {
@@ -346,4 +357,4 @@ export const newsArticles: NewsArticle[] = [
     tags: ["Anniversary", "Celebration", "Milestone"],
     author: "Admin",
   },
-]
+];
