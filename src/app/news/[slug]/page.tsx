@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, User, Tag, ArrowLeft } from "lucide-react";
 import { newsArticles } from "@/data/news-data";
 import { notFound } from "next/navigation";
+import { console } from "inspector";
 
 interface PageProps {
   params: {
@@ -18,7 +19,8 @@ interface PageProps {
 export default function NewsDetailPage({ params, searchParams }: PageProps) {
   const { theme } = useTheme();
   const article = newsArticles.find((article) => article.slug === params.slug);
-
+const highlightTag = searchParams.tag as string | undefined;
+console.log("highlightTag", highlightTag);
   if (!article) {
     notFound();
   }
