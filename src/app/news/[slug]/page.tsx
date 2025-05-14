@@ -3,13 +3,8 @@ import { notFound } from "next/navigation";
 import NewsDetailClient from "./news-detail-client";
 import type { Metadata } from "next";
 
-// Use the correct type for params
-type Props = {
-  params: { slug: string }
-}
-
 // Generate metadata for SEO
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const article = newsArticles.find((article) => article.slug === params.slug);
   
   if (!article) {
@@ -30,8 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Use the same Props type for the page component
-export default function NewsDetailPage({ params }: Props) {
+// Use the simplified function signature
+export default function NewsDetailPage({ params }: { params: { slug: string } }) {
   // Find the article
   const article = newsArticles.find((article) => article.slug === params.slug);
   
