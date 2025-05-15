@@ -22,20 +22,20 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="container mx-auto px-4 z-10 text-white">
+        <div className="container mx-auto px-4 z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               Empowering Communities, Transforming Lives
             </h1>
             <p className="text-xl mb-8">
-              Akumaya Helping Hands Foundation Nepal is dedicated to sustainable development and improving lives across
+              Yakumaya Helping Hands Foundation Nepal is dedicated to sustainable development and improving lives across
               Nepal.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90">
                 Our Programs
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/20" asChild>
+              <Button size="lg" variant="outline" className="border-white hover:bg-white/20" asChild>
                 <Link href="/donate">Donate Now</Link>
               </Button>
             </div>
@@ -48,12 +48,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                Akumaya Helping Hands Foundation Nepal is committed to empowering communities through sustainable
+              <h2 className="text-3xl text-black dark:text-white font-bold mb-6">Our Mission</h2>
+              <p className="text-lg text-black dark:text-gray-300 mb-6">
+                Yakumaya Helping Hands Foundation Nepal is committed to empowering communities through sustainable
                 development initiatives, focusing on education, healthcare, livelihood, and disaster relief.
               </p>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+              <p className="text-lg text-black dark:text-gray-300 mb-6">
                 We believe in creating lasting change by working directly with communities, understanding their needs,
                 and implementing programs that foster self-reliance and resilience.
               </p>
@@ -81,7 +81,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Programs</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg text-black dark:text-gray-400 max-w-3xl mx-auto">
               We work across multiple sectors to create sustainable impact and improve the quality of life for
               communities across Nepal.
             </p>
@@ -94,7 +94,7 @@ export default function Home() {
                   <BookOpen className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Education</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-black dark:text-gray-400 mb-4">
                   Providing quality education and learning opportunities for children and adults.
                 </p>
                 <Link href="/programs/education" className="inline-flex items-center text-primary hover:underline">
@@ -109,7 +109,7 @@ export default function Home() {
                   <Heart className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Healthcare</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-black dark:text-gray-400 mb-4">
                   Improving access to healthcare services and promoting health awareness.
                 </p>
                 <Link href="/programs/healthcare" className="inline-flex items-center text-primary hover:underline">
@@ -124,7 +124,7 @@ export default function Home() {
                   <Lightbulb className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Livelihood</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-black dark:text-gray-400 mb-4">
                   Creating sustainable livelihood opportunities and economic empowerment.
                 </p>
                 <Link href="/programs/livelihood" className="inline-flex items-center text-primary hover:underline">
