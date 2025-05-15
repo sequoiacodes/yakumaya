@@ -1,7 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
+import { useTheme } from "next-themes"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -9,10 +10,10 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "The support from Akumaya Foundation has transformed our school. The new classrooms and learning materials have created a better environment for our students.",
+      "The support from Yakumaya Foundation has transformed our school. The new classrooms and learning materials have created a better environment for our students.",
     name: "Ramesh Sharma",
     title: "School Principal, Sindhupalchok",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/slider3.png?height=100&width=100",
   },
   {
     id: 2,
@@ -20,44 +21,46 @@ const testimonials = [
       "The vocational training program helped me gain skills and confidence. Now I run my own tailoring business and can support my family.",
     name: "Sita Tamang",
     title: "Program Beneficiary, Kathmandu",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/slider1.png?height=100&width=100",
   },
   {
     id: 3,
     quote:
-      "After the earthquake, Akumaya was one of the first organizations to reach our village with relief supplies. Their continued support has helped us rebuild our lives.",
+      "After the earthquake, Yakumaya was one of the first organizations to reach our village with relief supplies. Their continued support has helped us rebuild our lives.",
     name: "Bir Bahadur Gurung",
     title: "Community Leader, Gorkha",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/slider2.png?height=100&width=100",
   },
 ]
 
 export default function TestimonialSlider() {
+  const { theme } = useTheme()
   const [current, setCurrent] = useState(0)
   const [autoplay, setAutoplay] = useState(true)
+  
+  const next = useCallback(() => {
+    setCurrent(c => (c + 1) % testimonials.length)
+  }, [])
 
-  const next = () => {
-    setCurrent((current + 1) % testimonials.length)
-  }
-
-  const prev = () => {
-    setCurrent((current - 1 + testimonials.length) % testimonials.length)
-  }
-
+  const prev = useCallback(() => {
+    setCurrent(c => (c - 1 + testimonials.length) % testimonials.length)
+  }, [])
   useEffect(() => {
     if (!autoplay) return
 
     const interval = setInterval(next, 5000)
     return () => clearInterval(interval)
-  }, [current, autoplay])
+  }, [current, autoplay, next])
 
   return (
-    <section className="py-16">
+    <section className={`py-16 ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">What People Say About Us</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Hear from the communities and individuals we've worked with.
+          <h2 className={`text-3xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+            What People Say About Us
+          </h2>
+          <p className={`text-lg max-w-3xl mx-auto ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+            Hear from the communities and individuals we&apos;ve worked with.
           </p>
         </div>
 
@@ -73,7 +76,9 @@ export default function TestimonialSlider() {
             >
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 text-center">
+                  <div className={`rounded-lg shadow-lg p-8 text-center ${
+                    theme === 'dark' ? 'bg-gray-800' : 'bg-white'
+                  }`}>
                     <div className="flex justify-center mb-6">
                       <div className="relative">
                         <Quote className="absolute -top-2 -left-2 h-8 w-8 text-primary/20" />
@@ -86,9 +91,15 @@ export default function TestimonialSlider() {
                         />
                       </div>
                     </div>
-                    <p className="text-lg italic mb-6">{testimonial.quote}</p>
-                    <h4 className="font-bold">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{testimonial.title}</p>
+                    <p className={`text-lg italic mb-6 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
+                      {testimonial.quote}
+                    </p>
+                    <h4 className={`font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                      {testimonial.name}
+                    </h4>
+                    <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                      {testimonial.title}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -98,7 +109,9 @@ export default function TestimonialSlider() {
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full bg-white dark:bg-gray-800 shadow-md"
+            className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 rounded-full shadow-md ${
+              theme === 'dark' ? 'bg-gray-800' : 'bg-white'
+            }`}
             onClick={prev}
           >
             <ChevronLeft className="h-5 w-5" />
@@ -108,7 +121,9 @@ export default function TestimonialSlider() {
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 rounded-full bg-white dark:bg-gray-800 shadow-md"
+            className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 rounded-full shadow-md ${
+              theme === 'dark' ? 'bg-gray-800' : 'bg-white'
+            }`}
             onClick={next}
           >
             <ChevronRight className="h-5 w-5" />
@@ -119,7 +134,11 @@ export default function TestimonialSlider() {
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                className={`h-2 w-2 rounded-full ${current === index ? "bg-primary" : "bg-gray-300 dark:bg-gray-700"}`}
+                className={`h-2 w-2 rounded-full ${
+                  current === index 
+                    ? "bg-primary" 
+                    : theme === 'dark' ? "bg-gray-700" : "bg-gray-300"
+                }`}
                 onClick={() => setCurrent(index)}
               >
                 <span className="sr-only">Testimonial {index + 1}</span>

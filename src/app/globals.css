@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: rgba(255, 255, 255, 1);
-  --foreground: rgba(10, 10, 10, 1);
-  --card: rgba(255, 255, 255, 1);
-  --card-foreground: rgba(10, 10, 10, 1);
+  --background: #ffffff;
+  --foreground: #2e096d;
+
+
+  --card-foreground: rgb(190, 207, 226);
   --popover: rgba(255, 255, 255, 1);
-  --popover-foreground: rgba(10, 10, 10, 1);
-  --primary: rgba(23, 23, 23, 1);
+  --popover-foreground: rgb(183, 14, 14);
+  --primary: rgba(9, 112, 221,1);
   --primary-foreground: rgba(250, 250, 250, 1);
   --secondary: rgba(245, 245, 245, 1);
-  --secondary-foreground: rgba(23, 23, 23, 1);
+  --secondary-foreground: rgb(20, 3, 63);
   --muted: rgba(245, 245, 245, 1);
   --muted-foreground: rgba(115, 115, 115, 1);
   --accent: rgba(245, 245, 245, 1);
@@ -41,48 +42,79 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);  
+  --color-card-background: var(--card-background);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-radius: var(--radius);
+  --color-sidebar-background: var(--sidebar-background);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: rgba(10, 10, 10, 1);
-    --foreground: rgba(237, 237, 237, 1);
-  }
-}
+    --background: #0a0a0a;
+    --foreground: #ededed;
 
-.dark {
-  --background: rgba(10, 10, 10, 1);
-  --foreground: rgba(237, 237, 237, 1);
-  --card: rgba(10, 10, 10, 1);
-  --card-foreground: rgba(237, 237, 237, 1);
-  --popover: rgba(10, 10, 10, 1);
-  --popover-foreground: rgba(237, 237, 237, 1);
-  --primary: rgba(250, 250, 250, 1);
-  --primary-foreground: rgba(23, 23, 23, 1);
-  --secondary: rgba(38, 38, 38, 1);
-  --secondary-foreground: rgba(250, 250, 250, 1);
-  --muted: rgba(38, 38, 38, 1);
-  --muted-foreground: rgba(161, 161, 170, 1);
-  --accent: rgba(38, 38, 38, 1);
-  --accent-foreground: rgba(250, 250, 250, 1);
-  --destructive: rgba(136, 19, 55, 1);
+  
+  --card-foreground: rgb(190, 207, 226);
+  --popover: rgba(255, 255, 255, 1);
+  --popover-foreground: rgb(183, 14, 14);
+  --primary: rgba(9, 112, 221,1);
+  --primary-foreground: rgba(250, 250, 250, 1);
+  --secondary: rgba(245, 245, 245, 1);
+  --secondary-foreground: rgb(20, 3, 63);
+  --muted: rgba(245, 245, 245, 1);
+  --muted-foreground: rgba(115, 115, 115, 1);
+  --accent: rgba(245, 245, 245, 1);
+  --accent-foreground: rgba(23, 23, 23, 1);
+  --destructive: rgba(255, 71, 87, 1);
   --destructive-foreground: rgba(250, 250, 250, 1);
-  --border: rgba(38, 38, 38, 1);
-  --input: rgba(38, 38, 38, 1);
-  --ring: rgba(212, 212, 216, 1);
-  --chart-1: rgba(59, 130, 246, 1);
-  --chart-2: rgba(34, 197, 94, 1);
-  --chart-3: rgba(251, 191, 36, 1);
-  --chart-4: rgba(168, 85, 247, 1);
-  --chart-5: rgba(244, 63, 94, 1);
-  --sidebar-background: rgba(26, 27, 29, 1);
-  --sidebar-foreground: rgba(244, 244, 245, 1);
-  --sidebar-primary: rgba(62, 104, 196, 1);
-  --sidebar-primary-foreground: rgba(255, 255, 255, 1);
-  --sidebar-accent: rgba(41, 42, 44, 1);
-  --sidebar-accent-foreground: rgba(244, 244, 245, 1);
-  --sidebar-border: rgba(41, 42, 44, 1);
+  --border: rgba(228, 228, 231, 1);
+  --input: rgba(228, 228, 231, 1);
+  --ring: rgba(10, 10, 10, 1);
+  --chart-1: rgba(255, 153, 51, 1);
+  --chart-2: rgba(44, 181, 134, 1);
+  --chart-3: rgba(41, 98, 255, 1);
+  --chart-4: rgba(255, 205, 86, 1);
+  --chart-5: rgba(255, 129, 64, 1);
+  --radius: 0.5rem;
+  --sidebar-background: rgba(250, 250, 250, 1);
+  --sidebar-foreground: rgba(61, 63, 70, 1);
+  --sidebar-primary: rgba(26, 27, 29, 1);
+  --sidebar-primary-foreground: rgba(250, 250, 250, 1);
+  --sidebar-accent: rgba(244, 244, 245, 1);
+  --sidebar-accent-foreground: rgba(26, 27, 29, 1);
+  --sidebar-border: rgba(227, 230, 240, 1);
   --sidebar-ring: rgba(59, 130, 246, 1);
+  
+
+  }
 }
 
 body {

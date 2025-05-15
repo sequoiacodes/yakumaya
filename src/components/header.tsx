@@ -1,12 +1,13 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronDown } from "lucide-react"
-import { cn } from "@/lib/utils"
-import { usePathname } from "next/navigation"
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -24,68 +25,97 @@ const navItems = [
   { name: "News", href: "/news" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
-]
+];
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
-  const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setScrolled(true)
+        setScrolled(true);
       } else {
-        setScrolled(false)
+        setScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleSubmenu = (name: string) => {
     if (openSubmenu === name) {
-      setOpenSubmenu(null)
+      setOpenSubmenu(null);
     } else {
-      setOpenSubmenu(name)
+      setOpenSubmenu(name);
     }
-  }
+  };
 
   return (
     <header
-      className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300",
-        scrolled ? "bg-white shadow-md dark:bg-gray-900" : "bg-transparent",
-      )}
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? theme === "dark"
+            ? "bg-gray-900 shadow-lg text-gray-50"
+            : "bg-white shadow-md text-gray-950"
+          : "bg-transparent "
+      }`}
     >
-      <div className="container mx-auto px-4">
+      <div
+        className={`container mx-auto px-4 ${
+          theme === "dark" ? "text-gray-100" : "text-gray-900"
+        }`}
+      >
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/placeholder.svg?height=40&width=40"
-              alt="Akumaya Logo"
-              width={40}
-              height={40}
-              className="rounded-full"
+              style={{
+                animationDuration: "20000ms",
+                // animationDirection: "reverse",
+              }}
+              src="/logoYa.png?height=60&width=60"
+              alt="Yakumaya Logo"
+              width={80}
+              height={80}
+              className="rounded-full animate-spin w-20 h-20"
             />
             <div className="hidden md:block">
               <h1 className="text-lg font-bold text-primary">Yakumaya</h1>
-              <p className="text-xs text-muted-foreground">Helping Hands Foundation Nepal</p>
+              <p className={`text-xs
+              ${scrolled? theme === "dark" ? "text-white" : "text-black" : theme === "dark" ? "text-white" : "text-white"} `}
+              >
+                Helping Hands Foundation Nepal
+              </p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <div key={item.name} className="relative group">
+              <div key={item.name} className={`relative group ${
+                scrolled 
+                  ? theme === "dark" 
+                    ? "text-white" 
+                    : "text-gray-700"
+                  : "text-white"
+              }`}>
                 {item.submenu ? (
                   <button
                     onClick={() => toggleSubmenu(item.name)}
                     className={cn(
                       "flex items-center text-sm font-medium transition-colors hover:text-primary",
-                      pathname.startsWith(item.href) ? "text-primary" : "text-foreground",
+                      pathname.startsWith(item.href)
+                        ? "text-primary"
+                        : ``
                     )}
                   >
                     {item.name}
@@ -96,7 +126,9 @@ export default function Header() {
                     href={item.href}
                     className={cn(
                       "text-sm font-medium transition-colors hover:text-primary",
-                      pathname === item.href ? "text-primary" : "text-foreground",
+                      pathname === item.href
+                        ? "text-primary"
+                        : ""
                     )}
                   >
                     {item.name}
@@ -109,7 +141,7 @@ export default function Header() {
                       "absolute left-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition-all",
                       openSubmenu === item.name
                         ? "opacity-100 visible"
-                        : "opacity-0 invisible group-hover:opacity-100 group-hover:visible",
+                        : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
                     )}
                   >
                     <div className="py-1">
@@ -129,7 +161,26 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center space-x-4">
+            {mounted && (
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="mr-4"
+              >
+                {scrolled? theme === "dark" ? (
+                  <Sun className="h-5 w-5 text-yellow-600" />
+                ) : (
+                  <Moon className="h-5 w-5 text-gray-900" />
+                ) : theme === "dark" ? (
+                  <Sun className="h-5 w-5 text-yellow-600" />
+                ) : (
+                  <Moon className="h-5 w-5 text-white/80" />
+                )} 
+                <span className="sr-only">Toggle theme</span>
+              </Button>
+            )}
             <Button asChild>
               <Link href="/donate">Donate Now</Link>
             </Button>
@@ -164,7 +215,10 @@ export default function Header() {
                     >
                       {item.name}
                       <ChevronDown
-                        className={cn("h-4 w-4 transition-transform", openSubmenu === item.name ? "rotate-180" : "")}
+                        className={cn(
+                          "h-4 w-4 transition-transform",
+                          openSubmenu === item.name ? "rotate-180" : ""
+                        )}
                       />
                     </button>
                     {openSubmenu === item.name && (
@@ -187,7 +241,7 @@ export default function Header() {
                     href={item.href}
                     className={cn(
                       "block py-2 text-base font-medium hover:text-primary",
-                      pathname === item.href ? "text-primary" : "text-gray-600",
+                      pathname === item.href ? "text-primary" : "text-gray-600"
                     )}
                     onClick={() => setIsOpen(false)}
                   >
@@ -196,8 +250,22 @@ export default function Header() {
                 )}
               </div>
             ))}
-            <div className="pt-4">
-              <Button asChild className="w-full">
+            <div className="flex items-center justify-between pt-4">
+              {mounted && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                >
+                  {theme === "dark" ? (
+                    <Sun className="h-5 w-5" />
+                  ) : (
+                    <Moon className="h-5 w-5" />
+                  )}
+                  <span className="sr-only">Toggle theme</span>
+                </Button>
+              )}
+              <Button asChild className="w-full ml-4">
                 <Link href="/donate">Donate Now</Link>
               </Button>
             </div>
@@ -205,5 +273,5 @@ export default function Header() {
         </div>
       )}
     </header>
-  )
+  );
 }

@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Akumaya Helping Hands Foundation Nepal",
+  title: "Yakumaya Helping Hands Foundation Nepal",
   description: "Empowering communities and transforming lives in Nepal",
   authors: [{
     name: "Aalok",
-    url: "https://yakumaya.org"
+    url: "https://yakumaya.org.np"
   }],
 }
 
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
     <body className={`${geistSans.variable} ${geistMono.variable}`}>
-      <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
