@@ -67,7 +67,9 @@ export default function Header() {
           ? theme === "dark"
             ? "bg-gray-900 shadow-lg text-gray-50"
             : "bg-white shadow-md text-gray-950"
-          : "bg-transparent "
+          : theme === "dark"
+            ? "bg-gray-100 shadow-lg text-gray-50"
+            : "bg-gray-900 shadow-md text-gray-950"
       }`}
     >
       <div
@@ -91,7 +93,7 @@ export default function Header() {
             <div className="hidden md:block">
               <h1 className="text-lg font-bold text-primary">Yakumaya</h1>
               <p className={`text-xs
-              ${scrolled? theme === "dark" ? "text-white" : "text-black" : theme === "dark" ? "text-white" : "text-white"} `}
+              ${scrolled? theme === "dark" ? "text-white" : "text-black" : theme === "dark" ? "text-black" : "text-white"} `}
               >
                 Helping Hands Foundation Nepal
               </p>
@@ -104,9 +106,11 @@ export default function Header() {
               <div key={item.name} className={`relative group ${
                 scrolled 
                   ? theme === "dark" 
-                    ? "text-white" 
+                    ? "text-white " 
                     : "text-gray-700"
-                  : "text-white"
+                  : theme === "dark" 
+                    ? "text-black" 
+                    : "text-gray-700"
               }`}>
                 {item.submenu ? (
                   <button
@@ -167,7 +171,7 @@ export default function Header() {
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="mr-4"
+                className="mr-4 hover:bg-white/20 rounded-3xl"
               >
                 {scrolled? theme === "dark" ? (
                   <Sun className="h-5 w-5 text-yellow-600" />
@@ -176,7 +180,7 @@ export default function Header() {
                 ) : theme === "dark" ? (
                   <Sun className="h-5 w-5 text-yellow-600" />
                 ) : (
-                  <Moon className="h-5 w-5 text-white/80" />
+                  <Moon className="h-5 w-5 text-gray-100" />
                 )} 
                 <span className="sr-only">Toggle theme</span>
               </Button>
