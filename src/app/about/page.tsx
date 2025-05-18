@@ -209,8 +209,12 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 rounded-full w-fit mx-auto mb-4">
                   <Award className="h-6 w-6 text-primary" />
                 </div>
-                <h4 className="font-bold mb-2">Integrity</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <h4  className={`font-bold mb-2 ${
+                    theme === "dark" ? "text-gray-100" : "text-gray-900"
+                  }`}>Integrity</h4>
+                <p   className={`text-sm ${
+                    theme === "dark" ? "text-gray-400" : "text-gray-600"
+                  }`}>
                   We maintain transparency and accountability in all our
                   actions.
                 </p>
@@ -219,8 +223,12 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 rounded-full w-fit mx-auto mb-4">
                   <Users className="h-6 w-6 text-primary" />
                 </div>
-                <h4 className="font-bold mb-2">Collaboration</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <h4  className={`font-bold mb-2 ${
+                    theme === "dark" ? "text-gray-100" : "text-gray-900"
+                  }`}>Collaboration</h4>
+                <p   className={`text-sm ${
+                    theme === "dark" ? "text-gray-400" : "text-gray-600"
+                  }`}>
                   We believe in working together with communities and partners.
                 </p>
               </div>
@@ -228,8 +236,12 @@ export default function AboutPage() {
                 <div className="bg-primary/10 p-3 rounded-full w-fit mx-auto mb-4">
                   <BookOpen className="h-6 w-6 text-primary" />
                 </div>
-                <h4 className="font-bold mb-2">Innovation</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <h4  className={`font-bold mb-2 ${
+                    theme === "dark" ? "text-gray-100" : "text-gray-900"
+                  }`}>Innovation</h4>
+                <p   className={`text-sm ${
+                    theme === "dark" ? "text-gray-400" : "text-gray-600"
+                  }`}>
                   We seek creative solutions to complex challenges.
                 </p>
               </div>
@@ -261,8 +273,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                name: "Rajesh Sharma For Now",
-                title: "Executive Director",
+                name: "Tuk Narayan Shrestha",
+                title: "Founder & Executive Director",
                 image: "/ceo.png?height=300&width=300",
               },
               {

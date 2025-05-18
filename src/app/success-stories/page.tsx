@@ -20,7 +20,7 @@ export default function SuccessStoriesPage() {
       {/* Hero Section */}
       <section
         className={`relative h-[40vh] flex items-center ${
-          theme === "dark" ? "bg-gray-800" : "bg-gray-50"
+          theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-50 text-white"
         }`}
       >
         <div className="absolute inset-0 z-0">
@@ -38,14 +38,14 @@ export default function SuccessStoriesPage() {
           <div className="max-w-3xl">
             <h1
               className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 ${
-                theme === "dark" ? "text-white" : "text-gray-900"
+                theme === "dark" ? "text-white" : "text-white"
               }`}
             >
               Success Stories
             </h1>
             <p
               className={`text-xl ${
-                theme === "dark" ? "text-gray-100" : "text-gray-600"
+                theme === "dark" ? "text-gray-100" : "text-white"
               }`}
             >
               Real stories of change and transformation from the communities we
@@ -61,13 +61,13 @@ export default function SuccessStoriesPage() {
       >
         <div className="container mx-auto px-4">
           <Tabs defaultValue="all" className="w-full">
-            <div className="flex justify-center mb-8">
-              <TabsList>
-                <TabsTrigger value="all">All Stories</TabsTrigger>
-                <TabsTrigger value="education">Education</TabsTrigger>
-                <TabsTrigger value="healthcare">Healthcare</TabsTrigger>
-                <TabsTrigger value="livelihood">Livelihood</TabsTrigger>
-                <TabsTrigger value="disaster-relief">
+            <div className="mb-12 md:mb-8">
+  <TabsList className="flex gap-2 flex-wrap justify-center ">
+                    <TabsTrigger value="all" className="bg-blue-100 text-blue-600 mx-1 ">All Stories</TabsTrigger>
+                <TabsTrigger value="education" className="bg-blue-100 text-blue-600 mx-1 ">Education</TabsTrigger>
+                <TabsTrigger value="healthcare" className="bg-blue-100 text-blue-600 mx-1 ">Healthcare</TabsTrigger>
+                <TabsTrigger value="livelihood" className="bg-blue-100 text-blue-600 mx-1 ">Livelihood</TabsTrigger>
+                <TabsTrigger value="disaster-relief" className="bg-blue-100 text-blue-600 mx-1 ">
                   Disaster Relief
                 </TabsTrigger>
               </TabsList>
