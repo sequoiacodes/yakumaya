@@ -61,9 +61,13 @@ export default function Home() {
                 size="lg"
                 variant="outline"
                 // className="text-gray-500 border-white hover:bg-white/20"
-                className={`${theme === "dark" ? "text-white bg-black/70 border-white hover:bg-white/20" : "text-gray-800 border-gray-900 hover:bg-gray-900/20 hover:text-white"}`}
-                asChild
-              >
+className={`
+  transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
+  ${theme === "dark" 
+    ? "text-white bg-black/70 border-white hover:bg-white/20 hover:scale-[1.02] hover:shadow-glow hover:opacity-90" 
+    : "text-gray-200 bg-gray-800 border-gray-900 hover:bg-gray-900/20 hover:text-white hover:scale-[1.02] hover:shadow-md hover:opacity-90"
+  }
+`}              >
                 <Link href="/donate">Donate Now</Link>
               </Button>
             </div>
