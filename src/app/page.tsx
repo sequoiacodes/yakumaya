@@ -71,71 +71,68 @@ export default function Home() {
       </section>
 
       {/* Mission Section */}
-      <section
-        className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}
-      >
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="">
-              <h2
-                className={`text-3xl font-bold mb-6 ${
-                  theme === "dark" ? "text-white" : "text-gray-900"
-                }`}
-              >
-                Our Mission
-              </h2>
-              <p
-                className={`text-lg mb-6 ${
-                  theme === "dark" ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                Yakumaya Helping Hands Foundation Nepal is committed to
-                empowering communities through sustainable development
-                initiatives, focusing on education, healthcare, livelihood, and
-                disaster relief.
-              </p>
-              <p
-                className={`text-lg mb-6 ${
-                  theme === "dark" ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                We believe in creating lasting change by working directly with
-                communities, understanding their needs, and implementing
-                programs that foster self-reliance and resilience.
-              </p>
-              <Link
-                href="/about"
-                className="inline-flex items-center text-primary hover:underline"
-              >
-                Learn more about us <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-            <div className="flex justify-center items-center flex-wrap  md:gap-8">
-            <div className="relative w-50 h-70 bg-transparent ">
-              <Image
-                src="/ceo.png?height=500&width=400"
-                alt="Our Mission"
-                width={400}
-                height={500}
-                className="object-cover rounded-2xl bg-contain shadow-lg shadow-gray-950"
-              />
-              <p className="text-center text-gray-500 pt-2">Executive Director</p>
-            </div>
-            <div className="relative w-55 h-80 bg-transparent ">
-              <Image
-                src="/chairman.png?height=500&width=400"
-                alt="Our Mission"
-                width={400}
-                height={500}
-                className="object-cover rounded-2xl bg-contain shadow-lg shadow-gray-950"
-              />
-              <p className="text-center text-gray-500 pt-2">Chairman</p>
-            </div>
+       <section className={`py-8 sm:py-12 md:py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}>
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Text Content */}
+          <div className="order-2 md:order-1">
+            <h2
+              className={`text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 ${
+                theme === "dark" ? "text-white" : "text-gray-900"
+              }`}
+            >
+              Our Mission
+            </h2>
+            <p className={`text-base sm:text-lg mb-4 sm:mb-6 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
+              Yakumaya Helping Hands Foundation Nepal is committed to empowering communities through sustainable
+              development initiatives, focusing on education, healthcare, livelihood, and disaster relief.
+            </p>
+            <p className={`text-base sm:text-lg mb-4 sm:mb-6 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
+              We believe in creating lasting change by working directly with communities, understanding their needs, and
+              implementing programs that foster self-reliance and resilience.
+            </p>
+            <Link href="/about" className="inline-flex items-center text-primary hover:underline">
+              Learn more about us <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
 
+          {/* Team Images */}
+          <div className="order-1 md:order-2 mb-8 md:mb-0">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+              {/* Executive Director */}
+              <div className="w-full sm:w-1/2 max-w-[250px]">
+                <div className="relative aspect-[4/5] w-full">
+                  <Image
+                    src="/ceo.png?height=500&width=400"
+                    alt="Executive Director"
+                    fill
+                    className="object-cover rounded-2xl shadow-lg shadow-gray-950"
+                  />
+                </div>
+                <p className={`text-center pt-2 font-medium ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>
+                  Executive Director
+                </p>
+              </div>
+
+              {/* Chairman */}
+              <div className="w-full sm:w-1/2 max-w-[250px] mt-8 sm:mt-0">
+                <div className="relative aspect-[4/5] w-full">
+                  <Image
+                    src="/chairman.png?height=500&width=400"
+                    alt="Chairman"
+                    fill
+                    className="object-cover rounded-2xl shadow-lg shadow-gray-950"
+                  />
+                </div>
+                <p className={`text-center pt-2 font-medium ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>
+                  Chairman
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Counter Section */}
       <CounterSection />
