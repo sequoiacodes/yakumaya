@@ -111,29 +111,39 @@ export default function Home() {
                 Learn more about us <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
-            <div className="flex justify-center items-center flex-wrap  md:gap-8">
-            <div className="relative w-50 h-70 bg-transparent ">
-              <Image
-                src="/ceo.png?height=500&width=400"
-                alt="Our Mission"
-                width={400}
-                height={500}
-                className="object-cover rounded-2xl bg-contain shadow-lg shadow-gray-950"
-              />
-              <p className="text-center text-gray-500 pt-2">Executive Director</p>
-            </div>
-            <div className="relative w-55 h-80 bg-transparent ">
-              <Image
-                src="/chairman.png?height=500&width=400"
-                alt="Our Mission"
-                width={400}
-                height={500}
-                className="object-cover rounded-2xl bg-contain shadow-lg shadow-gray-950"
-              />
-              <p className="text-center text-gray-500 pt-2">Chairman</p>
-            </div>
+           <div className="order-1 md:order-2 mb-8 md:mb-0">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+              {/* Executive Director */}
+              <div className="w-full sm:w-1/2 max-w-[250px]">
+                <div className="relative aspect-[4/5] w-full">
+                  <Image
+                    src="/ceo.png?height=500&width=400"
+                    alt="Executive Director"
+                    fill
+                    className="object-cover rounded-2xl shadow-lg shadow-gray-950"
+                  />
+                </div>
+                <p className={`text-center pt-2 font-medium ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>
+                  Executive Director
+                </p>
+              </div>
 
+              {/* Chairman */}
+              <div className="w-full sm:w-1/2 max-w-[250px] mt-8 sm:mt-0">
+                <div className="relative aspect-[4/5] w-full">
+                  <Image
+                    src="/chairman.png?height=500&width=400"
+                    alt="Chairman"
+                    fill
+                    className="object-cover rounded-2xl shadow-lg shadow-gray-950"
+                  />
+                </div>
+                <p className={`text-center pt-2 font-medium ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>
+                  Chairman
+                </p>
+              </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
