@@ -67,7 +67,7 @@ export default function GalleryPage() {
           <Tabs defaultValue="all" className="w-full">
             <div className="flex justify-center flex-wrap items-center mb-8">
               <TabsList
-                className={ `flex flex-wrap h-auto gap-1 ${theme === "dark" ? "bg-gray-800" : "bg-gray-100 text-gray-800"}`}
+                className={ `flex flex-wrap h-auto gap-1 ${theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-100 text-gray-800"}`}
               >
                 <TabsTrigger value="all" className=" shadow-md shadow-black  rounded-xl ">All</TabsTrigger>
                 <TabsTrigger value="education" className="shadow-md shadow-black rounded-xl ">Education</TabsTrigger>
