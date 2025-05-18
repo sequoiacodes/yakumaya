@@ -60,7 +60,8 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-white border-white hover:bg-white/20"
+                // className="text-gray-500 border-white hover:bg-white/20"
+                className={`${theme === "dark" ? "text-white bg-black/70 border-white hover:bg-white/20" : "text-gray-800 border-gray-900 hover:bg-gray-900/20 hover:text-white"}`}
                 asChild
               >
                 <Link href="/donate">Donate Now</Link>
