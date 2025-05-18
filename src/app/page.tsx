@@ -60,7 +60,8 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-white border-white hover:bg-white/20"
+                // className="text-gray-500 border-white hover:bg-white/20"
+                className={`${theme === "dark" ? "text-white bg-black/70 border-white hover:bg-white/20" : "text-gray-800 border-gray-900 hover:bg-gray-900/20 hover:text-white"}`}
                 asChild
               >
                 <Link href="/donate">Donate Now</Link>
@@ -71,33 +72,44 @@ export default function Home() {
       </section>
 
       {/* Mission Section */}
-       <section className={`py-8 sm:py-12 md:py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}>
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Text Content */}
-          <div className="order-2 md:order-1">
-            <h2
-              className={`text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 ${
-                theme === "dark" ? "text-white" : "text-gray-900"
-              }`}
-            >
-              Our Mission
-            </h2>
-            <p className={`text-base sm:text-lg mb-4 sm:mb-6 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
-              Yakumaya Helping Hands Foundation Nepal is committed to empowering communities through sustainable
-              development initiatives, focusing on education, healthcare, livelihood, and disaster relief.
-            </p>
-            <p className={`text-base sm:text-lg mb-4 sm:mb-6 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
-              We believe in creating lasting change by working directly with communities, understanding their needs, and
-              implementing programs that foster self-reliance and resilience.
-            </p>
-            <Link href="/about" className="inline-flex items-center text-primary hover:underline">
-              Learn more about us <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-
-          {/* Team Images */}
-          <div className="order-1 md:order-2 mb-8 md:mb-0">
+      <section className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}>
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="">
+              <h2
+                className={`text-3xl font-bold mb-6 ${
+                  theme === "dark" ? "text-white" : "text-gray-900"
+                }`}
+              >
+                Our Mission
+              </h2>
+              <p
+                className={`text-lg mb-6 ${
+                  theme === "dark" ? "text-gray-300" : "text-gray-700"
+                }`}
+              >
+                Yakumaya Helping Hands Foundation Nepal is committed to
+                empowering communities through sustainable development
+                initiatives, focusing on education, healthcare, livelihood, and
+                disaster relief.
+              </p>
+              <p
+                className={`text-lg mb-6 ${
+                  theme === "dark" ? "text-gray-300" : "text-gray-700"
+                }`}
+              >
+                We believe in creating lasting change by working directly with
+                communities, understanding their needs, and implementing
+                programs that foster self-reliance and resilience.
+              </p>
+              <Link
+                href="/about"
+                className="inline-flex items-center text-primary hover:underline"
+              >
+                Learn more about us <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+           <div className="order-1 md:order-2 mb-8 md:mb-0">
             <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
               {/* Executive Director */}
               <div className="w-full sm:w-1/2 max-w-[250px]">
@@ -130,9 +142,10 @@ export default function Home() {
               </div>
             </div>
           </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    
 
       {/* Counter Section */}
       <CounterSection />

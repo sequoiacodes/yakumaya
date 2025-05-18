@@ -65,15 +65,15 @@ export default function GalleryPage() {
       >
         <div className="container mx-auto px-4">
           <Tabs defaultValue="all" className="w-full">
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center flex-wrap items-center mb-8">
               <TabsList
-                className={theme === "dark" ? "bg-gray-800" : "bg-gray-100 text-gray-800"}
+                className={ `flex flex-wrap h-auto gap-1 ${theme === "dark" ? "bg-gray-800" : "bg-gray-100 text-gray-800"}`}
               >
-                <TabsTrigger value="all">All</TabsTrigger>
-                <TabsTrigger value="education">Education</TabsTrigger>
-                <TabsTrigger value="healthcare">Healthcare</TabsTrigger>
-                <TabsTrigger value="livelihood">Livelihood</TabsTrigger>
-                <TabsTrigger value="disaster-relief">
+                <TabsTrigger value="all" className=" shadow-md shadow-black  rounded-xl ">All</TabsTrigger>
+                <TabsTrigger value="education" className="shadow-md shadow-black rounded-xl ">Education</TabsTrigger>
+                <TabsTrigger value="healthcare" className="shadow-md shadow-black rounded-xl ">Healthcare</TabsTrigger>
+                <TabsTrigger value="livelihood" className="shadow-md shadow-black rounded-xl ">Livelihood</TabsTrigger>
+                <TabsTrigger value="disaster-relief" className="shadow-md shadow-black rounded-xl ">
                   Disaster Relief
                 </TabsTrigger>
               </TabsList>
