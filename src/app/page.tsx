@@ -541,7 +541,7 @@ export default function Home() {
             <Button
               size="lg"
               variant="outline"
-              className="text-white border-white hover:bg-white/20"
+              className="text-gray-600 border-white hover:bg-white/20"
             >
               Become a Volunteer
             </Button>
