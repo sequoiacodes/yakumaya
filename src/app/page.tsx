@@ -44,7 +44,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="container mx-auto px-4 z-10">
+        <div className="container mx-auto px-4 z-10 text-white">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               Empowering Communities, Transforming Lives
@@ -72,7 +72,9 @@ export default function Home() {
       </section>
 
       {/* Mission Section */}
-      <section className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}>
+      <section
+        className={`py-16 ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}`}
+      >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="">
@@ -145,7 +147,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    
 
       {/* Counter Section */}
       <CounterSection />
