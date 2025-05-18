@@ -106,7 +106,9 @@ export default function Header() {
                   ? theme === "dark" 
                     ? "text-white" 
                     : "text-gray-700"
-                  : "text-white"
+                  : theme === "dark" 
+                    ? "text-white" 
+                    : "text-gray-700"
               }`}>
                 {item.submenu ? (
                   <button
