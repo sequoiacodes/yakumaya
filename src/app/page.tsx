@@ -61,13 +61,15 @@ export default function Home() {
                 size="lg"
                 variant="outline"
                 // className="text-gray-500 border-white hover:bg-white/20"
-className={`
-  transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
-  ${theme === "dark" 
-    ? "text-white bg-black/70 border-white hover:bg-white/20 hover:scale-[1.02] hover:shadow-glow hover:opacity-90" 
-    : "text-gray-200 bg-gray-800 border-gray-900 hover:bg-gray-900/20 hover:text-white hover:scale-[1.02] hover:shadow-md hover:opacity-90"
-  }
-`}              >
+                className={`
+                          transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
+                           ${
+                               theme === "dark"
+                                       ? "text-white bg-black/70 border-white hover:bg-white/20 hover:scale-[1.02] hover:shadow-glow hover:opacity-90"
+                                 : "text-gray-200 bg-gray-800 border-gray-900 hover:bg-gray-900/20 hover:text-white hover:scale-[1.02] hover:shadow-md hover:opacity-90"
+                           }
+                        `}
+              >
                 <Link href="/donate">Donate Now</Link>
               </Button>
             </div>
@@ -115,39 +117,47 @@ className={`
                 Learn more about us <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
-           <div className="order-1 md:order-2 mb-8 md:mb-0">
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
-              {/* Executive Director */}
-              <div className="w-full sm:w-1/2 max-w-[250px]">
-                <div className="relative aspect-[4/5] w-full">
-                  <Image
-                    src="/ceo.png?height=500&width=400"
-                    alt="Executive Director"
-                    fill
-                    className="object-cover rounded-2xl shadow-lg shadow-gray-950"
-                  />
+            <div className="order-1 md:order-2 mb-8 md:mb-0">
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+                {/* Executive Director */}
+                <div className="w-full sm:w-1/2 max-w-[250px]">
+                  <div className="relative aspect-[4/5] w-full">
+                    <Image
+                      src="/ceo.png?height=500&width=400"
+                      alt="Executive Director"
+                      fill
+                      className="object-cover rounded-2xl shadow-lg shadow-gray-950"
+                    />
+                  </div>
+                  <p
+                    className={`text-center pt-2 font-medium ${
+                      theme === "dark" ? "text-gray-400" : "text-gray-500"
+                    }`}
+                  >
+                    Executive Director
+                  </p>
                 </div>
-                <p className={`text-center pt-2 font-medium ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>
-                  Executive Director
-                </p>
-              </div>
 
-              {/* Chairman */}
-              <div className="w-full sm:w-1/2 max-w-[250px] mt-8 sm:mt-0">
-                <div className="relative aspect-[4/5] w-full">
-                  <Image
-                    src="/chairman.png?height=500&width=400"
-                    alt="Chairman"
-                    fill
-                    className="object-cover rounded-2xl shadow-lg shadow-gray-950"
-                  />
+                {/* Chairman */}
+                <div className="w-full sm:w-1/2 max-w-[250px] mt-8 sm:mt-0">
+                  <div className="relative aspect-[4/5] w-full">
+                    <Image
+                      src="/chairman.png?height=500&width=400"
+                      alt="Chairman"
+                      fill
+                      className="object-cover rounded-2xl shadow-lg shadow-gray-950"
+                    />
+                  </div>
+                  <p
+                    className={`text-center pt-2 font-medium ${
+                      theme === "dark" ? "text-gray-400" : "text-gray-500"
+                    }`}
+                  >
+                    Chairman
+                  </p>
                 </div>
-                <p className={`text-center pt-2 font-medium ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>
-                  Chairman
-                </p>
               </div>
             </div>
-          </div>
           </div>
         </div>
       </section>
@@ -265,12 +275,20 @@ className={`
               <h2 className="text-3xl text-primary font-bold mb-4">
                 School Rebuilding Initiative
               </h2>
-              <p className= {`text-lg mb-6 ${theme === "dark" ? "text-white" : "text-gray-950"}`}>
+              <p
+                className={`text-lg mb-6 ${
+                  theme === "dark" ? "text-white" : "text-gray-950"
+                }`}
+              >
                 After the devastating earthquake in Nepal, we&apos;ve been
                 working to rebuild schools in remote areas, ensuring children
                 have safe spaces to learn and grow.
               </p>
-              <ul className={`space-y-2 mb-6 ${theme === "dark" ? "text-white" : "text-gray-950"}`}>
+              <ul
+                className={`space-y-2 mb-6 ${
+                  theme === "dark" ? "text-white" : "text-gray-950"
+                }`}
+              >
                 <li className="flex items-start">
                   <div className="bg-green-100 dark:bg-green-900 p-1 rounded-full mr-3 mt-1">
                     <svg
