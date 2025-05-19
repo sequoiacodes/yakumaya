@@ -15,12 +15,78 @@ import {
   Twitter,
   Instagram,
   Youtube,
+  Send,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [buttonText, setButtonText] = useState("Send Message"); // Add state for button text
+
   const { theme } = useTheme();
+
+   const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+   const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setButtonText("Sending..."); // Set sending state
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+     
+      setButtonText("||Sent|| We'll get back to you soon!");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+
+      setTimeout(() => {
+        setButtonText("Send Message");
+        
+      }, 5000);
+    } catch (error) {
+     
+      setButtonText("Sorry Message couldn't be sent");
+      setTimeout(() => {
+      
+        setButtonText("Send Message");
+      }, 4000);
+
+      console.error("Contact form error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
 
   return (
     <div
@@ -135,10 +201,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
                     <p className="">
-                      info@yakumaya.org.np
-                      <br />
-                      support@yakumaya.org.np
+                     <a href="mailto:yhhfn.org.np@gmail.com">yhhfn.org.np@gmail.com</a>
+                      
                     </p>
+
                   </div>
                 </div>
 
@@ -178,17 +244,24 @@ export default function ContactPage() {
                   >
                     Send Us a Message
                   </h2>
-                  <form className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="name">Full Name</Label>
-                        <Input id="name" placeholder="Your full name" />
+                        <Input   id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange} placeholder="Your full name" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="email">Email</Label>
                         <Input
                           id="email"
-                          type="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+
                           placeholder="Your email address"
                         />
                       </div>
@@ -197,20 +270,46 @@ export default function ContactPage() {
                       <Label htmlFor="subject">Subject</Label>
                       <Input
                         id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+
                         placeholder="Subject of your message"
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="message">Message</Label>
                       <Textarea
-                        id="message"
+                       id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+
                         placeholder="Your message"
                         rows={5}
                       />
                     </div>
-                    <Button type="submit" className="w-full">
-                      Send Message
-                    </Button>
+                     <Button
+                    type="submit"
+                    size="lg"
+                    disabled={isSubmitting}
+                    className="w-full group"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="mr-2 h-4 w-4" />
+                        {buttonText}
+                        <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          →
+                        </span>
+                      </>
+                    )}
+                  </Button>
                   </form>
                 </CardContent>
               </Card>
@@ -374,7 +473,7 @@ export default function ContactPage() {
             <Button
               size="lg"
               variant="outline"
-              className="text-white border-white hover:bg-white/20"
+              className="text-gray-500 border-white hover:bg-white/20"
             >
               Become a Volunteer
             </Button>

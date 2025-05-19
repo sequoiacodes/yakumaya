@@ -196,7 +196,7 @@ export default function Header() {
                   className="rounded-full hover:bg-opacity-20"
                 >
                   {theme === "dark" ? (
-                    <Sun className="h-5 w-5" />
+                    <Sun className="h-5 w-5 text-yellow-500" />
                   ) : (
                     <Moon className="h-5 w-5" />
                   )}
@@ -233,9 +233,7 @@ export default function Header() {
           theme === "dark" ? "bg-gray-800" : "bg-white"
         )}>
 
-     <Button asChild className="w-full ml-4">
-                <Link href="/donate">Donate Now</Link>
-              </Button>
+     
 
           <div className="space-y-1 px-4 pb-3 pt-2">
             {navItems.map((item) => (
@@ -289,9 +287,12 @@ export default function Header() {
                     {item.name}
                   </Link>
                 )}
+              
               </div>
             ))}
-          
+          <Button asChild className="w-full ">
+                <Link href="/donate">Donate Now</Link>
+              </Button>
           </div>
         </div>
       )}
