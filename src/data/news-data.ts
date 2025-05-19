@@ -14,92 +14,100 @@ export interface NewsArticle {
 export const newsArticles: NewsArticle[] = [
   {
     id: 1,
-    title: "Health Camp Successfully Conducted in Dolakha",
-    slug: "health-camp-dolakha",
+    title: "Helping Hands on Humla: Medical Outreach",
+    slug: "helping-hands-humla",
     excerpt:
-      "Our team conducted a free health camp in Dolakha district, providing medical services to over 500 people from remote villages who otherwise have limited access to healthcare.",
+      "Our team provided vital medical services to remote communities in Humla, reaching over 500 people who otherwise have limited access to healthcare.",
     content: `
-      <p>On May 15, 2023, Yakumaya Helping Hands Foundation Nepal successfully conducted a three-day health camp in Dolakha district, providing essential medical services to over 500 people from remote villages.</p>
+      <p>On May 15, 2023, Yakumaya Helping Hands Foundation Nepal successfully conducted a three-day medical outreach program in Humla district, providing essential healthcare services to over 500 people from some of Nepal's most isolated communities.</p>
       
-      <p>The health camp was organized in collaboration with local health authorities and volunteer doctors from Kathmandu. Services provided included general health check-ups, eye examinations, dental care, and awareness sessions on preventive healthcare.</p>
+      <p>The outreach initiative was organized in collaboration with local health authorities and volunteer doctors from Kathmandu. Services provided included general health check-ups, eye examinations, dental care, and awareness sessions on preventive healthcare.</p>
       
-      <p>"Many people in these remote areas have to walk for hours to reach the nearest health facility. This camp brought healthcare services directly to their community," said Dr. Ramesh Sharma, who led the medical team.</p>
+      <p>"Many residents in Humla have to walk for days to reach the nearest health facility. This outreach effort brought critical healthcare services directly to these remote villages," said Dr. Ramesh Sharma, who led the medical team.</p>
       
-      <p>The camp also distributed free medicines and eyeglasses to those in need. Follow-up care was arranged for patients requiring further treatment.</p>
+      <p>The program also distributed free medicines and eyeglasses to those in need. Follow-up care was arranged for patients requiring further treatment.</p>
       
-      <p>This initiative is part of our ongoing commitment to improving healthcare access in underserved communities across Nepal. We plan to organize similar camps in other remote districts in the coming months.</p>
+      <p>This initiative is part of our ongoing commitment to improving healthcare access in Nepal's most underserved regions. We plan to organize similar outreach programs in other remote districts in the coming months.</p>
       
-      <p>We extend our heartfelt gratitude to all the medical professionals, volunteers, and donors who made this health camp possible.</p>
+      <p>We extend our heartfelt gratitude to all the medical professionals, volunteers, and donors who made this outreach possible.</p>
     `,
     date: "May 15, 2023",
-    imageUrl: "/camp2.png?height=400&width=600&text=Health Camp",
+    imageUrl: "/humla1.jpeg?height=400&width=600&text=Health Camp",
     categories: ["Healthcare", "Events"],
-    tags: ["Health Camp", "Dolakha", "Healthcare", "Medical Services"],
+    tags: ["Health Camp", "Humla", "Healthcare", "Medical Services"],
     author: "Admin",
   },
   {
     id: 2,
-    title: "New Vocational Training Center Inaugurated",
-    slug: "vocational-training-center",
+    title: "Helping Hands on Scholarship: Supporting Higher Education",
+    slug: "helping-hands-scholarship",
     excerpt:
-      "We're proud to announce the opening of our new vocational training center in Kathmandu, offering skills development programs for underprivileged youth and women.",
+      "We're proud to announce our new scholarship program supporting 50 underprivileged students to pursue higher education in various fields.",
     content: `
-      <p>Yakumaya Helping Hands Foundation Nepal is proud to announce the inauguration of our new Vocational Training Center in Kathmandu on April 28, 2023. The center will offer skills development programs for underprivileged youth and women, focusing on employable skills that can lead to sustainable livelihoods.</p>
+      <p>Yakumaya Helping Hands Foundation Nepal is proud to announce the launch of our comprehensive scholarship program supporting 50 underprivileged students to pursue higher education. The program was officially inaugurated on April 28, 2023, in Kathmandu.</p>
       
-      <p>The center was inaugurated by Mr. Binod Chaudhary, a prominent business leader and philanthropist, in the presence of local government officials, community leaders, and beneficiaries.</p>
+      <p>The scholarship initiative was launched by Mr. Binod Chaudhary, a prominent business leader and philanthropist, in the presence of educational authorities, community leaders, and beneficiaries.</p>
       
-      <p>The facility is equipped with modern training equipment and will initially offer courses in tailoring, computer skills, beauty and wellness, and hospitality. Each course is designed to be practical and market-oriented, with a focus on both technical skills and entrepreneurship.</p>
+      <p>The scholarship program will provide:</p>
       
-      <p>"This center represents our commitment to economic empowerment through skills development. By providing quality vocational training, we aim to help individuals become self-reliant and contribute to their communities," said Sunita Gurung, Program Director at Yakumaya Foundation.</p>
+      <ul>
+        <li>Full tuition coverage for undergraduate studies</li>
+        <li>Monthly stipend for living expenses</li>
+        <li>Educational materials and resources</li>
+        <li>Mentorship from professionals in relevant fields</li>
+        <li>Career counseling and job placement support</li>
+      </ul>
       
-      <p>The first batch of 50 trainees has already been enrolled, with classes set to begin next week. The foundation plans to train over 200 individuals in the first year of operation.</p>
+      <p>"Education is the most powerful tool for breaking the cycle of poverty. This scholarship program represents our commitment to ensuring that talented young people aren't denied educational opportunities due to financial constraints," said Sunita Gurung, Program Director at Yakumaya Foundation.</p>
       
-      <p>This initiative is supported by various corporate partners and individual donors who share our vision of creating sustainable livelihood opportunities for marginalized communities.</p>
+      <p>The scholarship recipients were selected through a rigorous process based on academic merit, financial need, and personal motivation. They will be pursuing degrees in fields including medicine, engineering, education, agriculture, and social sciences.</p>
+      
+      <p>This initiative is supported by various corporate partners and individual donors who share our vision of creating educational opportunities for Nepal's future leaders.</p>
     `,
     date: "April 28, 2023",
-    imageUrl: "/voca.png?height=400&width=600&text=Training Center",
-    categories: ["Livelihood", "Education"],
+    imageUrl: "/new2.jpeg?height=400&width=600&text=Scholarship Program",
+    categories: ["Education", "Youth Development"],
     tags: [
-      "Vocational Training",
-      "Skills Development",
-      "Women Empowerment",
-      "Youth",
+      "Scholarships",
+      "Higher Education",
+      "Youth Empowerment",
+      "Poverty Reduction",
     ],
     author: "Admin",
   },
   {
     id: 3,
-    title: "Annual Report 2022-2023 Released",
-    slug: "annual-report-2022-2023",
+    title: "Helping Hands on Educational Stationery Distribution",
+    slug: "educational-stationery-distribution",
     excerpt:
-      "Our annual report highlighting our achievements, challenges, and financial transparency for the past year is now available for public viewing.",
+      "Our foundation distributed essential educational stationery to 2,000 students across 15 schools in rural Nepal to support their learning journey.",
     content: `
-      <p>Yakumaya Helping Hands Foundation Nepal is pleased to announce the release of our Annual Report for the fiscal year 2022-2023. The report provides a comprehensive overview of our programs, achievements, challenges, and financial statements for the past year.</p>
+      <p>Yakumaya Helping Hands Foundation Nepal is pleased to announce the successful completion of our Educational Stationery Distribution program for the academic year 2022-2023. The initiative provided essential learning materials to 2,000 students across 15 schools in rural Nepal.</p>
       
-      <p>Key highlights from the report include:</p>
+      <p>Key highlights from the program include:</p>
       
       <ul class="list-disc space-y-2 pl-6">
-        <li class="">Implemented 20 community development projects across 5 districts</li>
-        <li class="">Successfully implemented 15 projects across 10 districts in Nepal</li>
-        <li class="">Directly benefited over 10,000 individuals through various programs</li>
-        <li class="">Rebuilt 5 schools damaged by natural disasters</li>
-        <li class="">Conducted 8 health camps serving over 3,000 patients</li>
-        <li class="">Provided vocational training to 300 women and youth</li>
-        <li class="">Expanded our disaster preparedness program to 5 new communities</li>
+        <li class="">Distribution of comprehensive stationery kits to each student</li>
+        <li class="">Each kit contained notebooks, pens, pencils, rulers, erasers, and geometry boxes</li>
+        <li class="">Additional teaching aids provided to each participating school</li>
+        <li class="">Art supplies distributed to encourage creative expression</li>
+        <li class="">Reading books provided to enhance school libraries</li>
+        <li class="">Teacher resource materials supplied to improve instruction quality</li>
+        <li class="">Special learning materials for students with disabilities</li>
       </ul>
       
-      <p>The report also details our financial management, with complete transparency on how funds were allocated and utilized across different programs and operational expenses.</p>
+      <p>The distribution program targeted schools in areas where families struggle to afford basic educational supplies, ensuring that lack of materials doesn't become a barrier to learning.</p>
       
-      <p>"We believe in complete transparency and accountability to our donors, partners, and the communities we serve. This annual report reflects our commitment to responsible stewardship of resources and impactful programming," said Rajesh Sharma, Executive Director.</p>
+      <p>"Having proper learning materials is fundamental to educational success. This initiative aims to reduce the financial burden on families while ensuring students have the tools they need to engage fully in their education," said Maya Tamang, Education Program Coordinator.</p>
       
-      <p>The full report is available for download on our website or can be requested in print form from our office.</p>
+      <p>The program was implemented in close collaboration with local education authorities and school management committees to ensure appropriate and fair distribution.</p>
       
-      <p>We extend our sincere gratitude to all our supporters, partners, and team members who contributed to our work over the past year.</p>
+      <p>We express our sincere gratitude to all our supporters, partners, and team members who contributed to making this initiative successful.</p>
     `,
     date: "April 10, 2023",
-    imageUrl: "/report.png?height=400&width=600&text=Annual Report",
-    categories: ["Announcements", "Reports"],
-    tags: ["Annual Report", "Transparency", "Accountability"],
+    imageUrl: "/new3.jpeg?height=400&width=600&text=Stationery Distribution",
+    categories: ["Education", "Donations"],
+    tags: ["Educational Materials", "School Supplies", "Rural Education", "Student Support"],
     author: "Admin",
   },
   {
@@ -173,45 +181,45 @@ export const newsArticles: NewsArticle[] = [
       <p>We look forward to sharing the success stories of these women entrepreneurs in the coming months.</p>
     `,
     date: "March 8, 2023",
-    imageUrl: "/profile1.png?height=400&width=600&text=Women Entrepreneurs",
+    imageUrl: "/new4.jpeg?height=400&width=600&text=Women Entrepreneurs",
     categories: ["Livelihood", "Women Empowerment"],
     tags: ["Women Empowerment", "Entrepreneurship", "Livelihood", "Kavre"],
     author: "Admin",
   },
   {
     id: 6,
-    title: "Partnership Announced with Global Education Fund",
-    slug: "partnership-global-education-fund",
+    title: "Partnership Announced with Local Churches for Joint Ventures",
+    slug: "partnership-local-churches-joint-ventures",
     excerpt:
-      "We're excited to announce our new partnership with the Global Education Fund to expand our education programs in rural Nepal.",
+      "We're excited to announce our new partnerships with several local churches across Nepal to expand our community development initiatives.",
     content: `
-      <p>Yakumaya Helping Hands Foundation Nepal is pleased to announce a new strategic partnership with the Global Education Fund (GEF) to expand our education programs in rural Nepal. The partnership was formalized through a Memorandum of Understanding signed on February 20, 2023.</p>
+      <p>Yakumaya Helping Hands Foundation Nepal is pleased to announce new strategic partnerships with several local churches across Nepal to implement joint community development initiatives. The partnerships were formalized through a series of Memorandums of Understanding signed on February 20, 2023.</p>
       
-      <p>Through this collaboration, we will implement a three-year project titled "Quality Education for Rural Nepal," which aims to improve educational outcomes for children in underserved rural communities. The project will be implemented in 20 schools across 5 districts.</p>
+      <p>Through these collaborations, we will implement various projects focused on holistic community development in underserved areas. The joint initiatives will leverage the churches' community connections and Yakumaya's development expertise.</p>
       
-      <p>Key components of the project include:</p>
+      <p>Key components of these partnerships include:</p>
       
       <ul>
-        <li>Teacher training and professional development</li>
-        <li>Provision of learning materials and resources</li>
-        <li>Establishment of school libraries and resource centers</li>
-        <li>Scholarship support for marginalized students</li>
-        <li>Parent and community engagement initiatives</li>
-        <li>School infrastructure improvements</li>
+        <li>Youth mentorship and leadership development programs</li>
+        <li>Community health awareness campaigns</li>
+        <li>Education support for vulnerable children</li>
+        <li>Vocational training for unemployed community members</li>
+        <li>Family counseling and support services</li>
+        <li>Joint emergency response during disasters</li>
       </ul>
       
-      <p>"This partnership represents a significant step forward in our efforts to ensure quality education for all children, regardless of their geographic location or socioeconomic background," said Rajesh Sharma, Executive Director of Yakumaya Foundation.</p>
+      <p>"These partnerships represent a significant opportunity to combine our resources and strengths to serve communities more effectively. The local churches bring deep community connections and trust, while we bring development expertise and implementation capabilities," said Rajesh Sharma, Executive Director of Yakumaya Foundation.</p>
       
-      <p>The Global Education Fund will provide technical expertise and financial support, while Yakumaya Foundation will lead the implementation on the ground, leveraging our deep understanding of local contexts and established community relationships.</p>
+      <p>The churches will help identify community needs and mobilize local volunteers, while Yakumaya Foundation will provide technical expertise, training, and coordinate resource mobilization efforts.</p>
       
-      <p>"We are excited to partner with Yakumaya Foundation, whose commitment to education and community-led development aligns perfectly with our mission. Together, we can make a meaningful difference in the lives of thousands of children in rural Nepal," said Sarah Johnson, Regional Director of GEF.</p>
+      <p>"We are excited to partner with Yakumaya Foundation, whose commitment to holistic community development aligns with our mission to serve our communities. Together, we can make a greater impact than either of us could alone," said Pastor Samuel Tamang, representing the network of partner churches.</p>
       
-      <p>The project is expected to benefit approximately 5,000 students and 200 teachers over the three-year period.</p>
+      <p>Initial joint projects have already begun in five districts, with plans to expand to ten districts by the end of 2023. The partnerships are expected to benefit approximately 3,000 families across these communities.</p>
     `,
     date: "February 20, 2023",
-    imageUrl: "/gala.png?height=400&width=600&text=Partnership",
-    categories: ["Education", "Partnerships"],
-    tags: ["Education", "Partnership", "Rural Development"],
+    imageUrl: "/new6.jpeg?height=400&width=600&text=Church Partnership",
+    categories: ["Partnerships", "Community Development"],
+    tags: ["Partnership", "Churches", "Community Development", "Joint Ventures"],
     author: "Admin",
   },
   {
@@ -324,10 +332,10 @@ export const newsArticles: NewsArticle[] = [
   },
   {
     id: 10,
-    title: "Yakumaya Foundation Celebrates 10th Anniversary",
-    slug: "10th-anniversary-celebration",
+    title: "Yakumaya Foundation Celebrates 1st Anniversary",
+    slug: "1st-anniversary-celebration",
     excerpt:
-      "Yakumaya Helping Hands Foundation Nepal marked its 10th anniversary with a celebration highlighting a decade of impact across Nepal.",
+      "Yakumaya Helping Hands Foundation Nepal marked its 1st anniversary with a celebration highlighting a decade of impact across Nepal.",
     content: `
       <p>Yakumaya Helping Hands Foundation Nepal celebrated its 10th anniversary on December 10, 2022, marking a decade of dedicated service and impact across Nepal. The milestone was commemorated with an event in Kathmandu that brought together staff, beneficiaries, partners, donors, and government representatives.</p>
       
