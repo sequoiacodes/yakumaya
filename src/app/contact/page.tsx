@@ -185,7 +185,7 @@ export default function ContactPage() {
                     <p className="">
                       +977 1 XXXXXXX
                       <br />
-                      +977 9XXXXXXXX
+                      +977 9851216564
                     </p>
                   </div>
                 </div>
