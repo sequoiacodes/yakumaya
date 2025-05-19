@@ -326,7 +326,7 @@ export default function Footer() {
               }`}
             >
               &copy; {new Date().getFullYear()} Yakumaya Helping Hands
-              Foundation Nepal. <span className="flex"> All rights reserved. Powered by <Link className=" w-auto inline" href="https://sequoia.codes"><Image src="https://i.imgur.com/Fxu0usO.png" alt="" height={30} width={100} /></Link></span>
+              Foundation Nepal. <span className="flex"> All rights reserved. Powered by <Link className=" w-auto inline" href="https://sequoia.codes"><Image className={`${theme === "dark" ? "filter invert" : ""}`} src="/logo.svg" alt="" height={30} width={100} /></Link></span>
             </p>
             <div className="mt-4 md:mt-0">
               <ul
