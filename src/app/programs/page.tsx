@@ -78,7 +78,7 @@ export default function ProgramsPage() {
                   Providing quality education and learning opportunities for
                   children and adults.
                 </p>
-                <Button asChild variant="outline" className="w-full">
+                <Button asChild variant="outline" className={`w-full ${theme === "dark" ? "text-gray-800 bg-gray-200" : "text-gray-200 bg-gray-800"}`}>
                   <Link href="/programs/education">Learn More</Link>
                 </Button>
               </CardContent>
@@ -102,7 +102,7 @@ export default function ProgramsPage() {
                   Improving access to healthcare services and promoting health
                   awareness.
                 </p>
-                <Button asChild variant="outline" className="w-full">
+                <Button asChild variant="outline" className={`w-full ${theme === "dark" ? "text-gray-800 bg-gray-200" : "text-gray-200 bg-gray-800"}`}>
                   <Link href="/programs/healthcare">Learn More</Link>
                 </Button>
               </CardContent>
@@ -126,7 +126,7 @@ export default function ProgramsPage() {
                   Creating sustainable livelihood opportunities and economic
                   empowerment.
                 </p>
-                <Button asChild variant="outline" className="w-full">
+                <Button asChild variant="outline" className={`w-full ${theme === "dark" ? "text-gray-800 bg-gray-200" : "text-gray-200 bg-gray-800"}`}>
                   <Link href="/programs/livelihood">Learn More</Link>
                 </Button>
               </CardContent>
@@ -150,7 +150,7 @@ export default function ProgramsPage() {
                   Providing immediate relief and long-term recovery support
                   during disasters.
                 </p>
-                <Button asChild variant="outline" className="w-full">
+                <Button asChild variant="outline" className={`w-full ${theme === "dark" ? "text-gray-800 bg-gray-200" : "text-gray-200 bg-gray-800"}`}>
                   <Link href="/programs/disaster-relief">Learn More</Link>
                 </Button>
               </CardContent>

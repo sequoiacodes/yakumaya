@@ -66,10 +66,10 @@ export default function Header() {
         scrolled
           ? theme === "dark"
             ? "bg-gray-900 shadow-lg text-gray-50"
-            : "bg-white shadow-md text-gray-950"
+            : "bg-white shadow-md text-gray-900"
           : theme === "dark"
-            ? "bg-gray-100 shadow-lg text-gray-50"
-            : "bg-gray-900 shadow-md text-gray-950"
+            ? "bg-gray-900 shadow-lg text-gray-50"
+            : "bg-white shadow-md text-gray-900"
       }`}
     >
       <div
@@ -79,39 +79,30 @@ export default function Header() {
       >
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <Image
-              style={{
-                animationDuration: "20000ms",
-                // animationDirection: "reverse",
-              }}
-              src="/logoYa.png?height=60&width=60"
-              alt="Yakumaya Logo"
-              width={80}
-              height={80}
-              className="rounded-full animate-spin w-20 h-20"
-            />
+         <Image
+  style={{
+    animationDuration: "20000ms",
+  }}
+  src="/logoYa.png?height=60&width=60"
+  alt="Yakumaya Logo"
+  width={80}
+  height={80}
+  className="rounded-full animate-spin w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
+/>
             <div className="hidden md:block">
               <h1 className="text-lg font-bold text-primary">Yakumaya</h1>
-              <p className={`text-xs
-              ${scrolled? theme === "dark" ? "text-white" : "text-black" : theme === "dark" ? "text-black" : "text-white"} `}
-              >
+              <p className={`text-xs ${
+                theme === "dark" ? "text-gray-300" : "text-gray-600"
+              }`}>
                 Helping Hands Foundation Nepal
               </p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
-              <div key={item.name} className={`relative group ${
-                scrolled 
-                  ? theme === "dark" 
-                    ? "text-white " 
-                    : "text-gray-700"
-                  : theme === "dark" 
-                    ? "text-black" 
-                    : "text-gray-700"
-              }`}>
+              <div key={item.name} className="relative group">
                 {item.submenu ? (
                   <button
                     onClick={() => toggleSubmenu(item.name)}
@@ -119,7 +110,7 @@ export default function Header() {
                       "flex items-center text-sm font-medium transition-colors hover:text-primary",
                       pathname.startsWith(item.href)
                         ? "text-primary"
-                        : ``
+                        : theme === "dark" ? "text-gray-200" : "text-gray-700"
                     )}
                   >
                     {item.name}
@@ -132,7 +123,7 @@ export default function Header() {
                       "text-sm font-medium transition-colors hover:text-primary",
                       pathname === item.href
                         ? "text-primary"
-                        : ""
+                        : theme === "dark" ? "text-gray-200" : "text-gray-700"
                     )}
                   >
                     {item.name}
@@ -142,7 +133,10 @@ export default function Header() {
                 {item.submenu && (
                   <div
                     className={cn(
-                      "absolute left-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition-all",
+                      "absolute left-0 mt-2 w-48 rounded-md shadow-lg ring-1 ring-opacity-5 transition-all",
+                      theme === "dark" 
+                        ? "bg-gray-800 ring-white/10" 
+                        : "bg-white ring-black/10",
                       openSubmenu === item.name
                         ? "opacity-100 visible"
                         : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
@@ -153,7 +147,12 @@ export default function Header() {
                         <Link
                           key={subitem.name}
                           href={subitem.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          className={cn(
+                            "block px-4 py-2 text-sm hover:bg-opacity-10",
+                            theme === "dark" 
+                              ? "text-gray-200 hover:bg-white" 
+                              : "text-gray-700 hover:bg-black"
+                          )}
                         >
                           {subitem.name}
                         </Link>
@@ -165,23 +164,19 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             {mounted && (
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="mr-4 hover:bg-white/20 rounded-3xl"
+                className="rounded-full hover:bg-opacity-20"
               >
-                {scrolled? theme === "dark" ? (
-                  <Sun className="h-5 w-5 text-yellow-600" />
+                {theme === "dark" ? (
+                  <Sun className="h-5 w-5" />
                 ) : (
-                  <Moon className="h-5 w-5 text-gray-900" />
-                ) : theme === "dark" ? (
-                  <Sun className="h-5 w-5 text-yellow-600" />
-                ) : (
-                  <Moon className="h-5 w-5 text-gray-100" />
-                )} 
+                  <Moon className="h-5 w-5" />
+                )}
                 <span className="sr-only">Toggle theme</span>
               </Button>
             )}
@@ -189,11 +184,35 @@ export default function Header() {
               <Link href="/donate">Donate Now</Link>
             </Button>
           </div>
-
+         
           {/* Mobile menu button */}
+          <div className="flex gap-4 justify-center items-center lg:hidden">
+             <div className="">
+              {mounted && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  className="rounded-full hover:bg-opacity-20"
+                >
+                  {theme === "dark" ? (
+                    <Sun className="h-5 w-5 text-yellow-500" />
+                  ) : (
+                    <Moon className="h-5 w-5" />
+                  )}
+                  <span className="sr-only">Toggle theme</span>
+                </Button>
+              )}
+           
+            </div>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none"
+            className={cn(
+              "lg:hidden rounded-md p-2 hover:bg-opacity-20 focus:outline-none",
+              theme === "dark" 
+                ? "text-gray-200 hover:bg-white" 
+                : "text-gray-700 hover:bg-black"
+            )}
           >
             <span className="sr-only">Open main menu</span>
             {isOpen ? (
@@ -201,13 +220,21 @@ export default function Header() {
             ) : (
               <Menu className="block h-6 w-6" aria-hidden="true" />
             )}
+
           </button>
+            </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden">
+        <div className={cn(
+          "lg:hidden",
+          theme === "dark" ? "bg-gray-800" : "bg-white"
+        )}>
+
+     
+
           <div className="space-y-1 px-4 pb-3 pt-2">
             {navItems.map((item) => (
               <div key={item.name}>
@@ -215,7 +242,10 @@ export default function Header() {
                   <>
                     <button
                       onClick={() => toggleSubmenu(item.name)}
-                      className="flex w-full items-center justify-between py-2 text-base font-medium text-gray-600"
+                      className={cn(
+                        "flex w-full items-center justify-between py-2 text-base font-medium",
+                        theme === "dark" ? "text-gray-200" : "text-gray-700"
+                      )}
                     >
                       {item.name}
                       <ChevronDown
@@ -231,7 +261,10 @@ export default function Header() {
                           <Link
                             key={subitem.name}
                             href={subitem.href}
-                            className="block py-2 text-base font-medium text-gray-500 hover:text-gray-900"
+                            className={cn(
+                              "block py-2 text-base font-medium hover:text-primary",
+                              theme === "dark" ? "text-gray-300" : "text-gray-600"
+                            )}
                             onClick={() => setIsOpen(false)}
                           >
                             {subitem.name}
@@ -245,34 +278,21 @@ export default function Header() {
                     href={item.href}
                     className={cn(
                       "block py-2 text-base font-medium hover:text-primary",
-                      pathname === item.href ? "text-primary" : "text-gray-600"
+                      pathname === item.href 
+                        ? "text-primary" 
+                        : theme === "dark" ? "text-gray-200" : "text-gray-700"
                     )}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
                   </Link>
                 )}
+              
               </div>
             ))}
-            <div className="flex items-center justify-between pt-4">
-              {mounted && (
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                >
-                  {theme === "dark" ? (
-                    <Sun className="h-5 w-5" />
-                  ) : (
-                    <Moon className="h-5 w-5" />
-                  )}
-                  <span className="sr-only">Toggle theme</span>
-                </Button>
-              )}
-              <Button asChild className="w-full ml-4">
+          <Button asChild className="w-full ">
                 <Link href="/donate">Donate Now</Link>
               </Button>
-            </div>
           </div>
         </div>
       )}
