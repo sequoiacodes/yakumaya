@@ -15,17 +15,18 @@ export default function ProgramsPage() {
       className={`min-h-screen ${
         theme === "dark" ? "bg-gray-900" : "bg-white"
       }`}
-    >
-      {/* Hero Section */}
-      <section className="relative h-[40vh] flex items-center">
+    >      {/* Hero Section */}
+      <section className="relative h-[60vh] flex items-center">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/helpfood.jpg?height=600&width=1920"
-            alt="Programs Hero"
-            fill
-            className="object-cover brightness-50"
-            priority
-          />
+            <Image
+              src="/helpfood.jpg?height=1080&width=1920"
+              alt="Programs Hero"
+              fill
+              className="object-cover brightness-50"
+              priority
+              sizes="100vw"
+              style={{ objectPosition: "center 30%" }}
+            />
         </div>
         <div className="container mx-auto px-4 z-10 text-white">
           <div className="max-w-3xl">
@@ -78,7 +79,11 @@ export default function ProgramsPage() {
                   Providing quality education and learning opportunities for
                   children and adults.
                 </p>
-                <Button asChild variant="outline" className={`w-full ${theme === "dark" ? "text-gray-800 bg-gray-200" : "text-gray-200 bg-gray-800"}`}>
+                <Button
+                  asChild
+                  variant="outline"
+                  className={`w-full ${theme === "dark" ? "text-gray-800 bg-gray-200" : "text-gray-200 bg-gray-800"}`}
+                >
                   <Link href="/programs/education">Learn More</Link>
                 </Button>
               </CardContent>
@@ -102,7 +107,11 @@ export default function ProgramsPage() {
                   Improving access to healthcare services and promoting health
                   awareness.
                 </p>
-                <Button asChild variant="outline" className={`w-full ${theme === "dark" ? "text-gray-800 bg-gray-200" : "text-gray-200 bg-gray-800"}`}>
+                <Button
+                  asChild
+                  variant="outline"
+                  className={`w-full ${theme === "dark" ? "text-gray-800 bg-gray-200" : "text-gray-200 bg-gray-800"}`}
+                >
                   <Link href="/programs/healthcare">Learn More</Link>
                 </Button>
               </CardContent>
@@ -126,7 +135,11 @@ export default function ProgramsPage() {
                   Creating sustainable livelihood opportunities and economic
                   empowerment.
                 </p>
-                <Button asChild variant="outline" className={`w-full ${theme === "dark" ? "text-gray-800 bg-gray-200" : "text-gray-200 bg-gray-800"}`}>
+                <Button
+                  asChild
+                  variant="outline"
+                  className={`w-full ${theme === "dark" ? "text-gray-800 bg-gray-200" : "text-gray-200 bg-gray-800"}`}
+                >
                   <Link href="/programs/livelihood">Learn More</Link>
                 </Button>
               </CardContent>
@@ -150,7 +163,11 @@ export default function ProgramsPage() {
                   Providing immediate relief and long-term recovery support
                   during disasters.
                 </p>
-                <Button asChild variant="outline" className={`w-full ${theme === "dark" ? "text-gray-800 bg-gray-200" : "text-gray-200 bg-gray-800"}`}>
+                <Button
+                  asChild
+                  variant="outline"
+                  className={`w-full ${theme === "dark" ? "text-gray-800 bg-gray-200" : "text-gray-200 bg-gray-800"}`}
+                >
                   <Link href="/programs/disaster-relief">Learn More</Link>
                 </Button>
               </CardContent>
