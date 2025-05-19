@@ -6,6 +6,9 @@ const nextConfig = {
     // Disable TypeScript errors in production builds
     ignoreBuildErrors: process.env.VERCEL ? true : false,
   },
+  images: {
+    domains: ['i.imgur.com'],
+  },
 }
 
 module.exports = nextConfig

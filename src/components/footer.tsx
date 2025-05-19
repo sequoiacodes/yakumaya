@@ -321,12 +321,12 @@ export default function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p
-              className={`text-sm flex justify-content-center items-center ${
+              className={`text-sm   lg:flex ${
                 theme === "dark" ? "text-gray-400" : "text-gray-600"
               }`}
             >
               &copy; {new Date().getFullYear()} Yakumaya Helping Hands
-              Foundation Nepal. All rights reserved. Powered by <Link href="https://sequoia.codes"><img src="https://i.imgur.com/Fxu0usO.png" alt="" height={30} width={100} /></Link>
+              Foundation Nepal. <span className="flex"> All rights reserved. Powered by <Link className=" w-auto inline" href="https://sequoia.codes"><Image src="https://i.imgur.com/Fxu0usO.png" alt="" height={30} width={100} /></Link></span>
             </p>
             <div className="mt-4 md:mt-0">
               <ul
