@@ -62,19 +62,19 @@ export default function ProjectsPage() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Making a Difference</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <h2 className={`text-3xl font-bold mb-4 ${theme=="dark"?"text-white":"text-black"}`}>Making a Difference</h2>
+            <p className="text-lg text-gray-500 max-w-3xl mx-auto">
               Our projects focus on creating sustainable solutions to the most
               pressing challenges faced by communities across Nepal.
             </p>
           </div>
 
           <Tabs defaultValue="ongoing" className="w-full">
-            <div className="flex justify-center mb-8">
-              <TabsList>
-                <TabsTrigger value="ongoing">Ongoing Projects</TabsTrigger>
-                <TabsTrigger value="completed">Completed Projects</TabsTrigger>
-                <TabsTrigger value="upcoming">Upcoming Projects</TabsTrigger>
+            <div className="mb-12 md:mb-8 ">
+              <TabsList className="flex gap-2 flex-wrap justify-center ">
+                <TabsTrigger value="ongoing" className="bg-blue-100 text-blue-600 mx-1 ">Ongoing Projects</TabsTrigger>
+                <TabsTrigger value="completed" className="bg-blue-100 text-blue-600 mx-1" >Completed Projects</TabsTrigger>
+                <TabsTrigger value="upcoming" className="bg-blue-100 text-blue-600 mx-1" >Upcoming Projects</TabsTrigger>
               </TabsList>
             </div>
 
@@ -444,24 +444,24 @@ export default function ProjectsPage() {
               <div className="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full mb-4">
                 Featured Project
               </div>
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className={`text-3xl font-bold mb-4 ${theme=="dark"?"text-white":"text-black"}`}>
                 School Rebuilding Initiative
               </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+              <p className="text-lg text-gray-500  mb-6">
                 After the devastating earthquake in Nepal, we&apos;ve been
                 working to rebuild schools in remote areas, ensuring children
                 have safe spaces to learn and grow.
               </p>
 
-              <div className="mb-6">
-                <div className="flex justify-between mb-2">
+              <div className="mb-6 text-gray-500">
+                <div className="flex justify-between  mb-2">
                   <span className="font-medium">Fundraising Progress</span>
                   <span className="font-medium">$90,000 / $120,000</span>
                 </div>
                 <Progress value={75} className="h-2" />
               </div>
 
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2 mb-6 text-gray-500">
                 <li className="flex items-start">
                   <div className="bg-green-100 dark:bg-green-900 p-1 rounded-full mr-3 mt-1">
                     <svg
@@ -535,8 +535,8 @@ export default function ProjectsPage() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <h2 className={`text-3xl font-bold mb-4 ${theme=="dark"?"text-white":"text-black"}`}>Our Impact</h2>
+            <p className="text-lg text-gray-500 max-w-3xl mx-auto">
               Through our projects, we&apos;ve made significant strides in
               improving lives across Nepal.
             </p>
@@ -579,8 +579,8 @@ export default function ProjectsPage() {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Project Process</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <h2 className={`text-3xl font-bold mb-4 ${theme=="dark"?"text-white":"text-black"}`}>Our Project Process</h2>
+            <p className="text-lg text-gray-500 max-w-3xl mx-auto">
               We follow a systematic approach to ensure our projects create
               sustainable impact.
             </p>
