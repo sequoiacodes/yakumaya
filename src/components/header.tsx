@@ -150,8 +150,8 @@ export default function Header() {
                           className={cn(
                             "block px-4 py-2 text-sm hover:bg-opacity-10",
                             theme === "dark" 
-                              ? "text-gray-200 hover:bg-white" 
-                              : "text-gray-700 hover:bg-black"
+                              ? "text-gray-200 hover:bg-gray-700" 
+                              : "hover:text-white text-gray-600 hover:bg-black"
                           )}
                         >
                           {subitem.name}

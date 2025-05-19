@@ -187,17 +187,18 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3
+            <Link
+              href="/programs"
               className={`text-lg font-semibold mb-4 ${
                 theme === "dark" ? "text-white" : "text-gray-900"
               }`}
             >
               Our Programs
-            </h3>
+            </Link>
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/programs/education"
+                  href="/programs"
                   className={`${
                     theme === "dark"
                       ? "text-gray-400 hover:text-white"
@@ -209,7 +210,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/programs/healthcare"
+                  href="/programs"
                   className={`${
                     theme === "dark"
                       ? "text-gray-400 hover:text-white"
@@ -221,7 +222,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/programs/livelihood"
+                  href="/programs"
                   className={`${
                     theme === "dark"
                       ? "text-gray-400 hover:text-white"
@@ -233,7 +234,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/programs/disaster-relief"
+                  href="/programs"
                   className={`${
                     theme === "dark"
                       ? "text-gray-400 hover:text-white"
@@ -245,7 +246,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/programs/women-empowerment"
+                  href="/programs"
                   className={`${
                     theme === "dark"
                       ? "text-gray-400 hover:text-white"
@@ -292,7 +293,7 @@ export default function Footer() {
                     theme === "dark" ? "text-gray-400" : "text-gray-600"
                   }`}
                 >
-                  +977 1 XXXXXXX
+                  +977 9851216564
                 </span>
               </li>
               <li className="flex items-center">
@@ -306,7 +307,7 @@ export default function Footer() {
                     theme === "dark" ? "text-gray-400" : "text-gray-600"
                   }`}
                 >
-                  info@Yakumaya.org.np
+                  yhhfn.org.np@gmail.com
                 </span>
               </li>
             </ul>
@@ -320,12 +321,12 @@ export default function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p
-              className={`text-sm ${
+              className={`text-sm flex justify-content-center items-center ${
                 theme === "dark" ? "text-gray-400" : "text-gray-600"
               }`}
             >
               &copy; {new Date().getFullYear()} Yakumaya Helping Hands
-              Foundation Nepal. All rights reserved.
+              Foundation Nepal. All rights reserved. Powered by <Link href="https://sequoia.codes"><img src="https://i.imgur.com/Fxu0usO.png" alt="" height={30} width={100} /></Link>
             </p>
             <div className="mt-4 md:mt-0">
               <ul
