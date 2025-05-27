@@ -62,14 +62,12 @@ export default function SuccessStoriesPage() {
         <div className="container mx-auto px-4">
           <Tabs defaultValue="all" className="w-full">
             <div className="mb-12 md:mb-8">
-  <TabsList className="flex gap-2 flex-wrap justify-center ">
+             <TabsList className="flex gap-2 flex-wrap justify-center ">
                     <TabsTrigger value="all" className="bg-blue-100 text-blue-600 mx-1 ">All Stories</TabsTrigger>
                 <TabsTrigger value="education" className="bg-blue-100 text-blue-600 mx-1 ">Education</TabsTrigger>
                 <TabsTrigger value="healthcare" className="bg-blue-100 text-blue-600 mx-1 ">Healthcare</TabsTrigger>
                 <TabsTrigger value="livelihood" className="bg-blue-100 text-blue-600 mx-1 ">Livelihood</TabsTrigger>
-                <TabsTrigger value="disaster-relief" className="bg-blue-100 text-blue-600 mx-1 ">
-                  Disaster Relief
-                </TabsTrigger>
+                <TabsTrigger value="disaster-relief" className="bg-blue-100 text-blue-600 mx-1 ">  Disaster Relief</TabsTrigger>
               </TabsList>
             </div>
 

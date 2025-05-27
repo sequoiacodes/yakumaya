@@ -250,8 +250,11 @@ export default function ContactPage() {
                         <Label htmlFor="name">Full Name</Label>
                         <Input   id="name"
                         name="name"
+                        autoComplete="name"
+                        type="text"
                         value={formData.name}
-                        onChange={handleChange} placeholder="Your full name" />
+                        onChange={handleChange} placeholder="Your full name"
+                        required />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="email">Email</Label>
@@ -259,6 +262,8 @@ export default function ContactPage() {
                           id="email"
                         name="email"
                         type="email"
+                        required
+                        autoComplete="email"
                         value={formData.email}
                         onChange={handleChange}
 
@@ -270,6 +275,8 @@ export default function ContactPage() {
                       <Label htmlFor="subject">Subject</Label>
                       <Input
                         id="subject"
+                        required
+                      type="text"
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
@@ -281,10 +288,11 @@ export default function ContactPage() {
                       <Label htmlFor="message">Message</Label>
                       <Textarea
                        id="message"
+                      required
+                      autoComplete="off"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-
                         placeholder="Your message"
                         rows={5}
                       />

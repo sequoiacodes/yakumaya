@@ -214,8 +214,8 @@ export default function DonatePage() {
                   <div>
                     <h4 className="font-bold">For Large Donations</h4>
                     <p className="text-gray-500 ">
-                      Please contact us directly at donations@yakumaya.org.np or
-                      call +977 1 XXXXXXX
+                      Please contact us directly at yhhfn.org.np@gmail.com or
+                      call +977 9851216564
                     </p>
                   </div>
                 </div>
@@ -346,7 +346,7 @@ export default function DonatePage() {
                             <div className="space-y-4">
                               <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
                                 <div className="grid gap-6">
-                                  <div>
+                                  {/* <div>
                                     <h4 className="font-medium mb-2">
                                       Nepal Bank Limited
                                     </h4>
@@ -359,25 +359,25 @@ export default function DonatePage() {
                                       <p>Branch: Main Branch, Kathmandu</p>
                                       <p>Swift Code: NEPLNPKA</p>
                                     </div>
-                                  </div>
+                                  </div> */}
                                   <div>
                                     <h4 className="font-medium mb-2">
-                                      NIC Asia Bank
+                                      Sanima Bank
                                     </h4>
                                     <div className="space-y-1 text-sm">
                                       <p>
-                                        Account Name: Yakumaya Helping Hands
-                                        Foundation
+                                        Account Name: Tuk Narayan Shrestha
+                                       
                                       </p>
-                                      <p>Account Number: 09876543210</p>
-                                      <p>Branch: New Road, Kathmandu</p>
-                                      <p>Swift Code: NICENPKA</p>
+                                      <p>Account Number: 014011060013109</p>
+                                      <p>Branch: Kathmandu</p>
+                                      <p>Swift Code: SNMANPKA</p>
                                     </div>
                                   </div>
                                   <div>
                                     <p className="text-sm mb-2">Bank QR Code</p>
                                     <Image
-                                      src="/bank-qr.png"
+                                      src="/bankqr.jpg"
                                       alt="Bank QR"
                                       width={150}
                                       height={150}
