@@ -278,8 +278,8 @@ export default function AboutPage() {
                 image: "/ceo.png?height=300&width=300",
               },
               {
-                name: "Sunita Gurung For now",
-                title: "Chairman",
+                name: "Chandra Maya Shrestha",
+                title: "Chairperson",
                 image: "/chairman.png?height=300&width=300",
               },
               {

@@ -153,7 +153,7 @@ export default function Home() {
                       theme === "dark" ? "text-gray-400" : "text-gray-500"
                     }`}
                   >
-                    Chairman
+                    Chairperson
                   </p>
                 </div>
               </div>
