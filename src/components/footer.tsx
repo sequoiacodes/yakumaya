@@ -372,7 +372,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <p>Powered by <Link href="https://sequoia.codes" className="text-blue-500">SequoiaCodes</Link></p>
+              <p className="text-sm">Powered by <Link href="https://sequoia.codes" className="text-blue-500">SequoiaCodes</Link></p>
             </div>
           </div>
         </div>
