@@ -183,9 +183,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold mb-1">Phone</h3>
                     <p className="">
-                      +977 1 XXXXXXX
+                      +977 9851216564
                       <br />
-                      +977 9XXXXXXXX
+                      +977 9851216564
                     </p>
                   </div>
                 </div>

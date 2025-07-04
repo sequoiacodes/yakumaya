@@ -292,7 +292,7 @@ export default function Footer() {
                     theme === "dark" ? "text-gray-400" : "text-gray-600"
                   }`}
                 >
-                  +977 1 XXXXXXX
+                  +977 9851216564
                 </span>
               </li>
               <li className="flex items-center">
@@ -306,7 +306,7 @@ export default function Footer() {
                     theme === "dark" ? "text-gray-400" : "text-gray-600"
                   }`}
                 >
-                  info@Yakumaya.org.np
+                  yhhfn.org.np@gmail.com
                 </span>
               </li>
             </ul>
@@ -370,6 +370,9 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
+            </div>
+            <div>
+              <p>Powered by <Link href="https://sequoia.codes" className="text-blue-500">SequoiaCodes</Link></p>
             </div>
           </div>
         </div>
