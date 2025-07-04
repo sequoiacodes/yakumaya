@@ -142,7 +142,7 @@ export default function Header() {
                         : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
                     )}
                   >
-                    <div className="py-1">
+                    <div className="pt-1">
                       {item.submenu.map((subitem) => (
                         <Link
                           key={subitem.name}
@@ -150,8 +150,8 @@ export default function Header() {
                           className={cn(
                             "block px-4 py-2 text-sm hover:bg-opacity-10",
                             theme === "dark" 
-                              ? "text-gray-200 hover:bg-white" 
-                              : "text-gray-700 hover:bg-black"
+                              ? "text-gray-200 hover:bg-white hover:text-gray-600" 
+                              : "text-gray-700 hover:bg-black hover:text-gray-200"
                           )}
                         >
                           {subitem.name}
